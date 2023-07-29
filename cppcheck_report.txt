@@ -1,0 +1,1922 @@
+class/audio/usbd_audio.c:10:14: style: struct member 'audio_entity_param::wCur' is never used. [unusedStructMember]
+    uint32_t wCur;
+             ^
+class/audio/usbd_audio.c:11:14: style: struct member 'audio_entity_param::wMin' is never used. [unusedStructMember]
+    uint32_t wMin;
+             ^
+class/audio/usbd_audio.c:12:14: style: struct member 'audio_entity_param::wMax' is never used. [unusedStructMember]
+    uint32_t wMax;
+             ^
+class/audio/usbd_audio.c:13:14: style: struct member 'audio_entity_param::wRes' is never used. [unusedStructMember]
+    uint32_t wRes;
+             ^
+class/audio/usbh_audio.c:321:29: style: Consecutive return, break, continue, goto or throw statements are unnecessary. [duplicateBreak]
+                            break;
+                            ^
+class/audio/usbh_audio.c:262:9: style: The scope of the variable 'ret' can be reduced. [variableScope]
+    int ret;
+        ^
+class/audio/usbh_audio.c:29:28: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+        uint32_t bitno = 1 << devno;
+                           ^
+class/audio/usbh_audio.c:45:27: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour. See condition at line 44. [shiftTooManyBitsSigned]
+        g_devinuse &= ~(1 << devno);
+                          ^
+class/audio/usbh_audio.c:44:29: note: Assuming that condition 'devno<32' is not redundant
+    if (devno >= 0 && devno < 32) {
+                            ^
+class/audio/usbh_audio.c:45:27: note: Shift
+        g_devinuse &= ~(1 << devno);
+                          ^
+class/audio/usbh_audio.c:29:28: error: Signed integer overflow for expression '1<<devno'. [integerOverflow]
+        uint32_t bitno = 1 << devno;
+                           ^
+class/audio/usbh_audio.c:45:27: warning: Either the condition 'devno<32' is redundant or there is signed integer overflow for expression '1<<devno'. [integerOverflowCond]
+        g_devinuse &= ~(1 << devno);
+                          ^
+class/audio/usbh_audio.c:44:29: note: Assuming that condition 'devno<32' is not redundant
+    if (devno >= 0 && devno < 32) {
+                            ^
+class/audio/usbh_audio.c:45:27: note: Integer overflow
+        g_devinuse &= ~(1 << devno);
+                          ^
+class/audio/usbh_audio.c:56:18: style: Variable 'intf' is assigned a value that is never used. [unreadVariable]
+    uint8_t intf = 0xff;
+                 ^
+class/audio/usbh_audio.c:57:24: style: Variable 'altsetting' is assigned a value that is never used. [unreadVariable]
+    uint8_t altsetting = 1;
+                       ^
+class/cdc/usbd_cdc.c:19:28: style: Unused variable: line_coding_last [unusedVariable]
+    struct cdc_line_coding line_coding_last;
+                           ^
+class/cdc/usbh_cdc_acm.c:20:28: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+        uint32_t bitno = 1 << devno;
+                           ^
+class/cdc/usbh_cdc_acm.c:35:27: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour. See condition at line 34. [shiftTooManyBitsSigned]
+        g_devinuse &= ~(1 << devno);
+                          ^
+class/cdc/usbh_cdc_acm.c:34:29: note: Assuming that condition 'devno<32' is not redundant
+    if (devno >= 0 && devno < 32) {
+                            ^
+class/cdc/usbh_cdc_acm.c:35:27: note: Shift
+        g_devinuse &= ~(1 << devno);
+                          ^
+class/cdc/usbh_cdc_acm.c:20:28: error: Signed integer overflow for expression '1<<devno'. [integerOverflow]
+        uint32_t bitno = 1 << devno;
+                           ^
+class/cdc/usbh_cdc_acm.c:35:27: warning: Either the condition 'devno<32' is redundant or there is signed integer overflow for expression '1<<devno'. [integerOverflowCond]
+        g_devinuse &= ~(1 << devno);
+                          ^
+class/cdc/usbh_cdc_acm.c:34:29: note: Assuming that condition 'devno<32' is not redundant
+    if (devno >= 0 && devno < 32) {
+                            ^
+class/cdc/usbh_cdc_acm.c:35:27: note: Integer overflow
+        g_devinuse &= ~(1 << devno);
+                          ^
+class/dfu/usbd_dfu.c:108:14: style: The scope of the variable 'addr' can be reduced. [variableScope]
+    uint32_t addr;
+             ^
+class/dfu/usbd_dfu.c:109:14: style: The scope of the variable 'phaddr' can be reduced. [variableScope]
+    uint8_t *phaddr;
+             ^
+class/dfu/usbd_dfu.c:227:14: style: The scope of the variable 'addr' can be reduced. [variableScope]
+    uint32_t addr;
+             ^
+class/dfu/usbd_dfu.c:29:18: style: union member 'Anonymous0::d32' is never used. [unusedStructMember]
+        uint32_t d32[USBD_DFU_XFER_SIZE / 4U];
+                 ^
+class/dfu/usbd_dfu.c:146:24: style: Variable 'phaddr' is assigned a value that is never used. [unreadVariable]
+                phaddr = dfu_read_flash((uint8_t *)addr, g_usbd_dfu.buffer.d8, g_usbd_dfu.wlength);
+                       ^
+class/hid/usbh_hid.c:55:35: warning: Either the condition 'ret<0' is redundant or memcpy() argument nr 3 can have invalid value. The value is -8 but the valid values are '0:'. [invalidFunctionArg]
+    memcpy(buffer, g_hid_buf, ret - 8);
+                                  ^
+class/hid/usbh_hid.c:52:13: note: Assuming that condition 'ret<0' is not redundant
+    if (ret < 0) {
+            ^
+class/hid/usbh_hid.c:55:35: note: Invalid argument
+    memcpy(buffer, g_hid_buf, ret - 8);
+                                  ^
+class/hid/usbh_hid.c:106:37: style: The scope of the variable 'ep_desc' can be reduced. [variableScope]
+    struct usb_endpoint_descriptor *ep_desc;
+                                    ^
+class/hid/usbh_hid.c:20:28: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+        uint32_t bitno = 1 << devno;
+                           ^
+class/hid/usbh_hid.c:36:27: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour. See condition at line 35. [shiftTooManyBitsSigned]
+        g_devinuse &= ~(1 << devno);
+                          ^
+class/hid/usbh_hid.c:35:29: note: Assuming that condition 'devno<32' is not redundant
+    if (devno >= 0 && devno < 32) {
+                            ^
+class/hid/usbh_hid.c:36:27: note: Shift
+        g_devinuse &= ~(1 << devno);
+                          ^
+class/hid/usbh_hid.c:20:28: error: Signed integer overflow for expression '1<<devno'. [integerOverflow]
+        uint32_t bitno = 1 << devno;
+                           ^
+class/hid/usbh_hid.c:36:27: warning: Either the condition 'devno<32' is redundant or there is signed integer overflow for expression '1<<devno'. [integerOverflowCond]
+        g_devinuse &= ~(1 << devno);
+                          ^
+class/hid/usbh_hid.c:35:29: note: Assuming that condition 'devno<32' is not redundant
+    if (devno >= 0 && devno < 32) {
+                            ^
+class/hid/usbh_hid.c:36:27: note: Integer overflow
+        g_devinuse &= ~(1 << devno);
+                          ^
+class/hub/usbh_hub.c:228:30: style: The scope of the variable 'setup' can be reduced. [variableScope]
+    struct usb_setup_packet *setup;
+                             ^
+class/hub/usbh_hub.c:246:30: style: The scope of the variable 'setup' can be reduced. [variableScope]
+    struct usb_setup_packet *setup;
+                             ^
+class/hub/usbh_hub.c:264:30: style: The scope of the variable 'setup' can be reduced. [variableScope]
+    struct usb_setup_packet *setup;
+                             ^
+class/hub/usbh_hub.c:282:30: style: The scope of the variable 'setup' can be reduced. [variableScope]
+    struct usb_setup_packet *setup;
+                             ^
+class/hub/usbh_hub.c:637:9: style: The scope of the variable 'ret' can be reduced. [variableScope]
+    int ret = 0;
+        ^
+class/hub/usbh_hub.c:637:13: style: Variable 'ret' is assigned a value that is never used. [unreadVariable]
+    int ret = 0;
+            ^
+class/msc/usbd_msc.c:229:13: style: The scope of the variable 'inquiry00' can be reduced. [variableScope]
+    uint8_t inquiry00[6] = {
+            ^
+class/msc/usbd_msc.c:239:13: style: The scope of the variable 'inquiry80' can be reduced. [variableScope]
+    uint8_t inquiry80[8] = {
+            ^
+class/msc/usbd_msc.c:644:14: style: The scope of the variable 'data_len' can be reduced. [variableScope]
+    uint32_t data_len = 0;
+             ^
+class/msc/usbd_msc.c:644:23: style: Variable 'data_len' is assigned a value that is never used. [unreadVariable]
+    uint32_t data_len = 0;
+                      ^
+class/msc/usbh_msc.c:278:37: style: The scope of the variable 'ep_desc' can be reduced. [variableScope]
+    struct usb_endpoint_descriptor *ep_desc;
+                                    ^
+class/mtp/usbd_mtp.c:231:34: error: Buffer is accessed out of bounds: DefaultFileName [bufferAccessOutOfBounds]
+    memcpy(object_info.Filename, DefaultFileName, (uint32_t)object_info.Filename_len + 1U);
+                                 ^
+class/mtp/usbd_mtp.c:510:5: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+    printf("send:%d\r\n", nbytes);
+    ^
+class/mtp/usbd_mtp.c:345:14: style: Unused variable: filename [unusedVariable]
+    uint16_t filename[255];
+             ^
+class/mtp/usbh_mtp.c:47:12: error: Uninitialized variable: ret [uninitvar]
+    return ret;
+           ^
+class/mtp/usbh_mtp.c:47:12: error: Uninitialized variable: ret [uninitvar]
+    return ret;
+           ^
+class/mtp/usbh_mtp.c:18:19: note: Assuming condition is false
+    if (mtp_class == NULL) {
+                  ^
+class/mtp/usbh_mtp.c:47:12: note: Uninitialized variable: ret
+    return ret;
+           ^
+class/mtp/usbh_mtp.c:13:37: style: Variable 'ep_cfg' is assigned a value that is never used. [unreadVariable]
+    struct usbh_endpoint_cfg ep_cfg = { 0 };
+                                    ^
+class/mtp/usbh_mtp.c:15:9: style: Variable 'ret' is not assigned a value. [unassignedVariable]
+    int ret;
+        ^
+class/printer/usbh_printer.c:56:37: style: The scope of the variable 'ep_desc' can be reduced. [variableScope]
+    struct usb_endpoint_descriptor *ep_desc;
+                                    ^
+class/printer/usbh_printer.c:14:9: style: Unused variable: ret [unusedVariable]
+    int ret;
+        ^
+class/printer/usbh_printer.c:28:9: style: Unused variable: ret [unusedVariable]
+    int ret;
+        ^
+class/printer/usbh_printer.c:42:9: style: Unused variable: ret [unusedVariable]
+    int ret;
+        ^
+class/printer/usbh_printer.c:55:37: style: Variable 'ep_cfg' is assigned a value that is never used. [unreadVariable]
+    struct usbh_endpoint_cfg ep_cfg = { 0 };
+                                    ^
+class/printer/usbh_printer.c:57:9: style: Unused variable: ret [unusedVariable]
+    int ret;
+        ^
+class/template/usbh_xxx.c:41:12: error: Uninitialized variable: ret [uninitvar]
+    return ret;
+           ^
+class/template/usbh_xxx.c:41:12: error: Uninitialized variable: ret [uninitvar]
+    return ret;
+           ^
+class/template/usbh_xxx.c:13:19: note: Assuming condition is false
+    if (xxx_class == NULL) {
+                  ^
+class/template/usbh_xxx.c:41:12: note: Uninitialized variable: ret
+    return ret;
+           ^
+class/template/usbh_xxx.c:10:9: style: Variable 'ret' is not assigned a value. [unassignedVariable]
+    int ret;
+        ^
+class/vendor/axusbnet.c:243:1: style: Label '_exit' is not used. [unusedLabel]
+_exit:
+^
+class/vendor/axusbnet.c:266:1: style: Label '_exit' is not used. [unusedLabel]
+_exit:
+^
+class/vendor/axusbnet.c:1103:1: style: Label 'out2' is not used. There is #if in function body so the label might be used in code that is removed by the preprocessor. [unusedLabelConfiguration]
+out2:
+^
+class/vendor/axusbnet.c:985:13: style: Local variable 'mode' shadows outer variable [shadowVariable]
+        u16 mode = AX88772_MEDIUM_DEFAULT;
+            ^
+class/vendor/axusbnet.c:954:9: note: Shadowed declaration
+    u16 mode = AX88772_MEDIUM_DEFAULT;
+        ^
+class/vendor/axusbnet.c:985:13: note: Shadow variable
+        u16 mode = AX88772_MEDIUM_DEFAULT;
+            ^
+class/vendor/axusbnet.c:891:3: warning:inconclusive: Found suspicious operator '&' [constStatement]
+  le32_to_cpus(&tmp32);
+  ^
+class/vendor/axusbnet.c:274:14: style: Unused variable: ret [unusedVariable]
+    u16 res, ret;
+             ^
+class/vendor/axusbnet.c:502:14: style: Unused variable: i [unusedVariable]
+    int ret, i;
+             ^
+class/vendor/axusbnet.c:660:14: style: Variable 'tick_end' is assigned a value that is never used. [unreadVariable]
+    tick_end = rt_tick_get();
+             ^
+class/vendor/axusbnet.c:619:13: style: Unused variable: int_notify_buf [unusedVariable]
+    uint8_t int_notify_buf[8];
+            ^
+class/vendor/axusbnet.c:687:26: style: Unused variable: hport [unusedVariable]
+    struct usbh_hubport *hport;
+                         ^
+class/vendor/axusbnet.c:688:13: style: Unused variable: intf [unusedVariable]
+    uint8_t intf;
+            ^
+class/vendor/axusbnet.c:765:18: style: Unused variable: smsr [unusedVariable]
+        uint16_t smsr;
+                 ^
+class/vendor/axusbnet.c:192:17: style: The scope of the variable 'ptr' can be reduced. [variableScope]
+    rt_uint8_t *ptr;
+                ^
+class/vendor/usbh_air724.c:36:37: style: The scope of the variable 'ep_desc' can be reduced. [variableScope]
+    struct usb_endpoint_descriptor *ep_desc;
+                                    ^
+class/vendor/usbh_air724.c:35:37: style: Variable 'ep_cfg' is assigned a value that is never used. [unreadVariable]
+    struct usbh_endpoint_cfg ep_cfg = { 0 };
+                                    ^
+class/video/usbh_video.c:35:28: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+        uint32_t bitno = 1 << devno;
+                           ^
+class/video/usbh_video.c:51:27: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour. See condition at line 50. [shiftTooManyBitsSigned]
+        g_devinuse &= ~(1 << devno);
+                          ^
+class/video/usbh_video.c:50:29: note: Assuming that condition 'devno<32' is not redundant
+    if (devno >= 0 && devno < 32) {
+                            ^
+class/video/usbh_video.c:51:27: note: Shift
+        g_devinuse &= ~(1 << devno);
+                          ^
+class/video/usbh_video.c:35:28: error: Signed integer overflow for expression '1<<devno'. [integerOverflow]
+        uint32_t bitno = 1 << devno;
+                           ^
+class/video/usbh_video.c:51:27: warning: Either the condition 'devno<32' is redundant or there is signed integer overflow for expression '1<<devno'. [integerOverflowCond]
+        g_devinuse &= ~(1 << devno);
+                          ^
+class/video/usbh_video.c:50:29: note: Assuming that condition 'devno<32' is not redundant
+    if (devno >= 0 && devno < 32) {
+                            ^
+class/video/usbh_video.c:51:27: note: Integer overflow
+        g_devinuse &= ~(1 << devno);
+                          ^
+class/wireless/usbd_rndis.c:392:28: style: Variable 'cmd' is assigned a value that is never used. [unreadVariable]
+    rndis_reset_msg_t *cmd = (rndis_reset_msg_t *)data;
+                           ^
+class/wireless/usbh_rndis.c:361:13: warning: Identical condition 'ret<0', second condition is always false [identicalConditionAfterEarlyExit]
+    if (ret < 0) {
+            ^
+class/wireless/usbh_rndis.c:354:13: note: If condition 'ret<0' is true, the function will return/exit
+    if (ret < 0) {
+            ^
+class/wireless/usbh_rndis.c:361:13: note: Testing identical condition 'ret<0'
+    if (ret < 0) {
+            ^
+class/wireless/usbh_rndis.c:239:22: style: Variable 'oid' is assigned a value that is never used. [unreadVariable]
+    unsigned int oid = 0;
+                     ^
+core/usbd_core.c:31:14: style: struct member 'usbd_tx_rx_msg::nbytes' is never used. [unusedStructMember]
+    uint32_t nbytes;
+             ^
+core/usbd_core.c:138:19: style: Variable 'ep_cfg.ep_mps' is assigned a value that is never used. [unreadVariable]
+    ep_cfg.ep_mps = ep_desc->wMaxPacketSize & USB_MAXPACKETSIZE_MASK;
+                  ^
+core/usbd_core.c:165:13: style: The scope of the variable 'str_len' can be reduced. [variableScope]
+    uint8_t str_len = 0;
+            ^
+core/usbd_core.c:1190:9: style: The scope of the variable 'ret' can be reduced. [variableScope]
+    int ret;
+        ^
+core/usbd_core.c:1171:9: style: The scope of the variable 'ret' can be reduced. [variableScope]
+    int ret;
+        ^
+core/usbh_core.c:211:50: style: Variable 'hport->config.config_desc.iConfiguration' is reassigned a value before the old one has been used. [redundantAssignment]
+        hport->config.config_desc.iConfiguration = desc->iConfiguration;
+                                                 ^
+core/usbh_core.c:210:50: note: hport->config.config_desc.iConfiguration is assigned
+        hport->config.config_desc.iConfiguration = desc->iConfiguration;
+                                                 ^
+core/usbh_core.c:211:50: note: hport->config.config_desc.iConfiguration is overwritten
+        hport->config.config_desc.iConfiguration = desc->iConfiguration;
+                                                 ^
+core/usbh_core.c:42:13: style: The scope of the variable 'devaddr' can be reduced. [variableScope]
+    uint8_t devaddr;
+            ^
+core/usbh_core.c:43:9: style: The scope of the variable 'index' can be reduced. [variableScope]
+    int index;
+        ^
+core/usbh_core.c:44:9: style: The scope of the variable 'bitno' can be reduced. [variableScope]
+    int bitno;
+        ^
+core/usbh_core.c:69:9: style: The scope of the variable 'index' can be reduced. [variableScope]
+    int index;
+        ^
+core/usbh_core.c:70:9: style: The scope of the variable 'bitno' can be reduced. [variableScope]
+    int bitno;
+        ^
+core/usbh_core.c:770:34: style: Local variable 'i' shadows outer variable [shadowVariable]
+                    for (uint8_t i = 0; i < hport->config.config_desc.bNumInterfaces; i++) {
+                                 ^
+core/usbh_core.c:728:18: note: Shadowed declaration
+    usb_slist_t *i;
+                 ^
+core/usbh_core.c:770:34: note: Shadow variable
+                    for (uint8_t i = 0; i < hport->config.config_desc.bNumInterfaces; i++) {
+                                 ^
+core/usbh_core.c:56:43: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour. See condition at line 48. [shiftTooManyBitsSigned]
+        if ((devgen->alloctab[index] & (1 << bitno)) == 0) {
+                                          ^
+core/usbh_core.c:48:26: note: Assuming that condition 'devgen->next>=0x7f' is not redundant
+        if (devgen->next >= 0x7f) {
+                         ^
+core/usbh_core.c:47:9: note: Assignment from 'devaddr=devgen->next'
+        devaddr = devgen->next;
+        ^
+core/usbh_core.c:55:25: note: Assignment 'bitno=devaddr&0x1f', assigned value is 31
+        bitno = devaddr & 0x1f;
+                        ^
+core/usbh_core.c:56:43: note: Shift
+        if ((devgen->alloctab[index] & (1 << bitno)) == 0) {
+                                          ^
+core/usbh_core.c:56:43: warning: Either the condition 'devgen->next>=0x7f' is redundant or there is signed integer overflow for expression '1<<bitno'. [integerOverflowCond]
+        if ((devgen->alloctab[index] & (1 << bitno)) == 0) {
+                                          ^
+core/usbh_core.c:48:26: note: Assuming that condition 'devgen->next>=0x7f' is not redundant
+        if (devgen->next >= 0x7f) {
+                         ^
+core/usbh_core.c:47:9: note: Assignment from 'devaddr=devgen->next'
+        devaddr = devgen->next;
+        ^
+core/usbh_core.c:55:25: note: Assignment 'bitno=devaddr&0x1f', assigned value is 31
+        bitno = devaddr & 0x1f;
+                        ^
+core/usbh_core.c:56:43: note: Integer overflow
+        if ((devgen->alloctab[index] & (1 << bitno)) == 0) {
+                                          ^
+core/usbh_core.c:181:23: style: Variable 'desc_len' is assigned a value that is never used. [unreadVariable]
+    uint32_t desc_len = 0;
+                      ^
+demo/audio_v2_mic_speaker_multichan_template.c:293:26: style: Variable 'packet_size' is assigned a value that is never used. [unreadVariable]
+    uint16_t packet_size = 0;
+                         ^
+demo/dfu_st_cubemx_main.c:61:13: style: The scope of the variable 'JumpToApplication' can be reduced. [variableScope]
+  pFunction JumpToApplication;
+            ^
+demo/dfu_st_cubemx_main.c:62:12: style: The scope of the variable 'JumpAddress' can be reduced. [variableScope]
+  uint32_t JumpAddress;
+           ^
+demo/dfu_st_cubemx_main.c:150:10: style: Variable 'status' is assigned a value that is never used. [unreadVariable]
+  status = HAL_FLASHEx_Erase(&eraseinitstruct, &PageError);
+         ^
+port/ch32/usb_ch58x_dc_usbfs.c:299:9: style: Assignment of function parameter has no effect outside the function. [uselessAssignmentArg]
+        data_len = MIN(data_len, usb_dc_cfg.ep_out[ep_idx].mps);
+        ^
+port/ch32/usb_dc_usbfs.c:257:26: style: The scope of the variable 'token' can be reduced. [variableScope]
+    uint32_t ep_idx = 0, token, write_count, read_count;
+                         ^
+port/ch32/usb_dc_usbfs.c:257:33: style: The scope of the variable 'write_count' can be reduced. [variableScope]
+    uint32_t ep_idx = 0, token, write_count, read_count;
+                                ^
+port/ch32/usb_dc_usbfs.c:257:46: style: The scope of the variable 'read_count' can be reduced. [variableScope]
+    uint32_t ep_idx = 0, token, write_count, read_count;
+                                             ^
+port/ch32/usb_dc_usbfs.c:376:22: style: Local variable 'ep_idx' shadows outer variable [shadowVariable]
+        for (uint8_t ep_idx = 1; ep_idx < USB_NUM_BIDIR_ENDPOINTS; ep_idx++) {
+                     ^
+port/ch32/usb_dc_usbfs.c:257:14: note: Shadowed declaration
+    uint32_t ep_idx = 0, token, write_count, read_count;
+             ^
+port/ch32/usb_dc_usbfs.c:376:22: note: Shadow variable
+        for (uint8_t ep_idx = 1; ep_idx < USB_NUM_BIDIR_ENDPOINTS; ep_idx++) {
+                     ^
+port/ch32/usb_dc_usbfs.c:28:13: style: struct member 'ch32_usbfs_ep_state::ep_stalled' is never used. [unusedStructMember]
+    uint8_t ep_stalled; /* Endpoint stall flag */
+            ^
+port/ch32/usb_dc_usbhs.c:250:14: style: The scope of the variable 'ep_idx' can be reduced. [variableScope]
+    uint32_t ep_idx, token, write_count, read_count;
+             ^
+port/ch32/usb_dc_usbhs.c:250:22: style: The scope of the variable 'token' can be reduced. [variableScope]
+    uint32_t ep_idx, token, write_count, read_count;
+                     ^
+port/ch32/usb_dc_usbhs.c:250:29: style: The scope of the variable 'write_count' can be reduced. [variableScope]
+    uint32_t ep_idx, token, write_count, read_count;
+                            ^
+port/ch32/usb_dc_usbhs.c:250:42: style: The scope of the variable 'read_count' can be reduced. [variableScope]
+    uint32_t ep_idx, token, write_count, read_count;
+                                         ^
+port/ch32/usb_dc_usbhs.c:364:22: style: Local variable 'ep_idx' shadows outer variable [shadowVariable]
+        for (uint8_t ep_idx = 1; ep_idx < USB_NUM_BIDIR_ENDPOINTS; ep_idx++) {
+                     ^
+port/ch32/usb_dc_usbhs.c:250:14: note: Shadowed declaration
+    uint32_t ep_idx, token, write_count, read_count;
+             ^
+port/ch32/usb_dc_usbhs.c:364:22: note: Shadow variable
+        for (uint8_t ep_idx = 1; ep_idx < USB_NUM_BIDIR_ENDPOINTS; ep_idx++) {
+                     ^
+port/ch32/usb_dc_usbhs.c:26:13: style: struct member 'ch32_usbhs_ep_state::ep_stalled' is never used. [unusedStructMember]
+    uint8_t ep_stalled; /* Endpoint stall flag */
+            ^
+port/ch32/usb_hc_usbfs.c:1022:14: style: The scope of the variable 'rx_len' can be reduced. [variableScope]
+    uint16_t rx_len = 0;
+             ^
+port/ch32/usb_hc_usbhs.c:1098:14: style: The scope of the variable 'rx_len' can be reduced. [variableScope]
+    uint16_t rx_len = 0;
+             ^
+port/dwc2/usb_dc_dwc2.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 13 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+port/dwc2/usb_dc_dwc2.c:643:9: style: Variable 'ret' is reassigned a value before the old one has been used. [redundantAssignment]
+    ret = dwc2_flush_txfifo(0x10U);
+        ^
+port/dwc2/usb_dc_dwc2.c:585:9: note: ret is assigned
+    ret = dwc2_core_init();
+        ^
+port/dwc2/usb_dc_dwc2.c:643:9: note: ret is overwritten
+    ret = dwc2_flush_txfifo(0x10U);
+        ^
+port/dwc2/usb_dc_dwc2.c:644:9: style: Variable 'ret' is reassigned a value before the old one has been used. [redundantAssignment]
+    ret = dwc2_flush_rxfifo();
+        ^
+port/dwc2/usb_dc_dwc2.c:643:9: note: ret is assigned
+    ret = dwc2_flush_txfifo(0x10U);
+        ^
+port/dwc2/usb_dc_dwc2.c:644:9: note: ret is overwritten
+    ret = dwc2_flush_rxfifo();
+        ^
+port/dwc2/usb_dc_dwc2.c:735:12: style:inconclusive: Found duplicate branches for 'if' and 'else'. [duplicateBranch]
+    } else if ((DevEnumSpeed == DSTS_ENUMSPD_FS_PHY_30MHZ_OR_60MHZ) ||
+           ^
+port/dwc2/usb_dc_dwc2.c:738:7: note: Found duplicate branches for 'if' and 'else'.
+    } else {
+      ^
+port/dwc2/usb_dc_dwc2.c:735:12: note: Found duplicate branches for 'if' and 'else'.
+    } else if ((DevEnumSpeed == DSTS_ENUMSPD_FS_PHY_30MHZ_OR_60MHZ) ||
+           ^
+port/dwc2/usb_dc_dwc2.c:334:13: style: The scope of the variable 'i' can be reduced. [variableScope]
+    uint8_t i;
+            ^
+port/dwc2/usb_dc_dwc2.c:421:14: style: The scope of the variable 'fifoemptymsk' can be reduced. [variableScope]
+    uint32_t fifoemptymsk;
+             ^
+port/dwc2/usb_dc_dwc2.c:177:13: style: struct member 'dwc2_ep_state::ep_stalled' is never used. [unusedStructMember]
+    uint8_t ep_stalled; /* Endpoint stall flag */
+            ^
+port/dwc2/usb_dc_dwc2.c:886:21: style: Variable 'pktcnt' is assigned a value that is never used. [unreadVariable]
+    uint32_t pktcnt = 0;
+                    ^
+port/dwc2/usb_dc_dwc2.c:957:21: style: Variable 'pktcnt' is assigned a value that is never used. [unreadVariable]
+    uint32_t pktcnt = 0;
+                    ^
+port/dwc2/usb_dc_dwc2.c:1017:57: style: Unused variable: read_count [unusedVariable]
+    uint32_t gint_status, temp, ep_idx, ep_intr, epint, read_count, daintmask;
+                                                        ^
+port/dwc2/usb_hc_dwc2.c:843:12: warning: Either the condition '!urb' is redundant or there is possible null pointer dereference: urb. [nullPointerRedundantCheck]
+    pipe = urb->pipe;
+           ^
+port/dwc2/usb_hc_dwc2.c:845:9: note: Assuming that condition '!urb' is not redundant
+    if (!urb || !pipe) {
+        ^
+port/dwc2/usb_hc_dwc2.c:843:12: note: Null pointer dereference
+    pipe = urb->pipe;
+           ^
+port/dwc2/usb_hc_dwc2.c:510:9: style: Variable 'ret' is reassigned a value before the old one has been used. [redundantAssignment]
+    ret = dwc2_flush_txfifo(0x10U);
+        ^
+port/dwc2/usb_hc_dwc2.c:482:9: note: ret is assigned
+    ret = dwc2_core_init();
+        ^
+port/dwc2/usb_hc_dwc2.c:510:9: note: ret is overwritten
+    ret = dwc2_flush_txfifo(0x10U);
+        ^
+port/dwc2/usb_hc_dwc2.c:511:9: style: Variable 'ret' is reassigned a value before the old one has been used. [redundantAssignment]
+    ret = dwc2_flush_rxfifo();
+        ^
+port/dwc2/usb_hc_dwc2.c:510:9: note: ret is assigned
+    ret = dwc2_flush_txfifo(0x10U);
+        ^
+port/dwc2/usb_hc_dwc2.c:511:9: note: ret is overwritten
+    ret = dwc2_flush_rxfifo();
+        ^
+port/dwc2/usb_hc_dwc2.c:904:9: style: Variable '((USB_OTG_HostChannelTypeDef*)(0x40040000UL+0x500UL+((ch_num)*0x20UL)))->HCINT' is reassigned a value before the old one has been used. [redundantAssignment]
+        CLEAR_HC_INT(ch_num, USB_OTG_HCINT_NAK);
+        ^
+port/dwc2/usb_hc_dwc2.c:903:9: note: ((USB_OTG_HostChannelTypeDef*)(0x40040000UL+0x500UL+((ch_num)*0x20UL)))->HCINT is assigned
+        CLEAR_HC_INT(ch_num, USB_OTG_HCINT_XFRC);
+        ^
+port/dwc2/usb_hc_dwc2.c:904:9: note: ((USB_OTG_HostChannelTypeDef*)(0x40040000UL+0x500UL+((ch_num)*0x20UL)))->HCINT is overwritten
+        CLEAR_HC_INT(ch_num, USB_OTG_HCINT_NAK);
+        ^
+port/dwc2/usb_hc_dwc2.c:915:9: style: Variable '((USB_OTG_HostChannelTypeDef*)(0x40040000UL+0x500UL+((ch_num)*0x20UL)))->HCINT' is reassigned a value before the old one has been used. [redundantAssignment]
+        CLEAR_HC_INT(ch_num, USB_OTG_HCINT_NAK);
+        ^
+port/dwc2/usb_hc_dwc2.c:914:9: note: ((USB_OTG_HostChannelTypeDef*)(0x40040000UL+0x500UL+((ch_num)*0x20UL)))->HCINT is assigned
+        CLEAR_HC_INT(ch_num, USB_OTG_HCINT_STALL);
+        ^
+port/dwc2/usb_hc_dwc2.c:915:9: note: ((USB_OTG_HostChannelTypeDef*)(0x40040000UL+0x500UL+((ch_num)*0x20UL)))->HCINT is overwritten
+        CLEAR_HC_INT(ch_num, USB_OTG_HCINT_NAK);
+        ^
+port/dwc2/usb_hc_dwc2.c:948:9: style: Variable '((USB_OTG_HostChannelTypeDef*)(0x40040000UL+0x500UL+((ch_num)*0x20UL)))->HCINT' is reassigned a value before the old one has been used. [redundantAssignment]
+        CLEAR_HC_INT(ch_num, USB_OTG_HCINT_DTERR);
+        ^
+port/dwc2/usb_hc_dwc2.c:947:9: note: ((USB_OTG_HostChannelTypeDef*)(0x40040000UL+0x500UL+((ch_num)*0x20UL)))->HCINT is assigned
+        CLEAR_HC_INT(ch_num, USB_OTG_HCINT_NAK);
+        ^
+port/dwc2/usb_hc_dwc2.c:948:9: note: ((USB_OTG_HostChannelTypeDef*)(0x40040000UL+0x500UL+((ch_num)*0x20UL)))->HCINT is overwritten
+        CLEAR_HC_INT(ch_num, USB_OTG_HCINT_DTERR);
+        ^
+port/dwc2/usb_hc_dwc2.c:1072:9: style: Variable '((USB_OTG_HostChannelTypeDef*)(0x40040000UL+0x500UL+((ch_num)*0x20UL)))->HCINT' is reassigned a value before the old one has been used. [redundantAssignment]
+        CLEAR_HC_INT(ch_num, USB_OTG_HCINT_NAK);
+        ^
+port/dwc2/usb_hc_dwc2.c:1071:9: note: ((USB_OTG_HostChannelTypeDef*)(0x40040000UL+0x500UL+((ch_num)*0x20UL)))->HCINT is assigned
+        CLEAR_HC_INT(ch_num, USB_OTG_HCINT_DTERR);
+        ^
+port/dwc2/usb_hc_dwc2.c:1072:9: note: ((USB_OTG_HostChannelTypeDef*)(0x40040000UL+0x500UL+((ch_num)*0x20UL)))->HCINT is overwritten
+        CLEAR_HC_INT(ch_num, USB_OTG_HCINT_NAK);
+        ^
+port/dwc2/usb_hc_dwc2.c:1208:27: style: The scope of the variable 'chan_int' can be reduced. [variableScope]
+    uint32_t gint_status, chan_int;
+                          ^
+port/dwc2/usb_hc_dwc2.c:511:9: style: Variable 'ret' is assigned a value that is never used. [unreadVariable]
+    ret = dwc2_flush_rxfifo();
+        ^
+port/dwc2/usb_hc_dwc2.c:1017:14: style: Unused variable: buflen [unusedVariable]
+    uint16_t buflen;
+             ^
+port/dwc2/usb_hc_dwc2.c:1149:37: style: Unused variable: regval [unusedVariable]
+    __IO uint32_t hprt0, hprt0_dup, regval;
+                                    ^
+port/ehci/usb_hc_ehci.c:107:12: warning: Either the condition 'tmp' is redundant or there is possible null pointer dereference: tmp. [nullPointerRedundantCheck]
+    while (EHCI_ADDR2QH(tmp->hw.hlp) && EHCI_ADDR2QH(tmp->hw.hlp) != n) {
+           ^
+port/ehci/usb_hc_ehci.c:111:9: note: Assuming that condition 'tmp' is not redundant
+    if (tmp) {
+        ^
+port/ehci/usb_hc_ehci.c:107:12: note: Null pointer dereference
+    while (EHCI_ADDR2QH(tmp->hw.hlp) && EHCI_ADDR2QH(tmp->hw.hlp) != n) {
+           ^
+port/ehci/usb_hc_ehci.c:593:22: style: The scope of the variable 'urb' can be reduced. [variableScope]
+    struct usbh_urb *urb;
+                     ^
+port/ehci/usb_hc_ehci.c:1188:23: style: The scope of the variable 'pipe' can be reduced. [variableScope]
+    struct ehci_pipe *pipe;
+                      ^
+port/ehci/usb_hc_ehci.c:1203:23: style: The scope of the variable 'pipe' can be reduced. [variableScope]
+    struct ehci_pipe *pipe;
+                      ^
+port/ehci/usb_hc_ehci.c:382:19: style: Unsigned expression 'buflen' can't be negative so it is unnecessary to test it. [unsignedPositive]
+    while (buflen >= 0) {
+                  ^
+port/ehci/usb_hc_ehci.c:475:19: style: Unsigned expression 'buflen' can't be negative so it is unnecessary to test it. [unsignedPositive]
+    while (buflen >= 0) {
+                  ^
+port/ehci/usb_hc_ehci.c:311:18: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+                 QTD_TOKEN_TOGGLE |
+                 ^
+port/ehci/usb_hc_ehci.c:329:14: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+             QTD_TOKEN_TOGGLE |
+             ^
+port/ehci/usb_hc_ehci.c:395:21: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+            token = QTD_TOKEN_TOGGLE;
+                    ^
+port/ehci/usb_hc_ehci.c:488:21: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+            token = QTD_TOKEN_TOGGLE;
+                    ^
+port/ehci/usb_hc_ehci.c:608:29: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+                if (token & QTD_TOKEN_TOGGLE) {
+                            ^
+port/ehci/usb_hc_ehci.c:311:18: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+                 QTD_TOKEN_TOGGLE |
+                 ^
+port/ehci/usb_hc_ehci.c:329:14: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+             QTD_TOKEN_TOGGLE |
+             ^
+port/ehci/usb_hc_ehci.c:395:21: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+            token = QTD_TOKEN_TOGGLE;
+                    ^
+port/ehci/usb_hc_ehci.c:488:21: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+            token = QTD_TOKEN_TOGGLE;
+                    ^
+port/ehci/usb_hc_ehci.c:608:29: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+                if (token & QTD_TOKEN_TOGGLE) {
+                            ^
+port/ehci/usb_hc_ehci.c:222:14: style: Variable 'rest' is assigned a value that is never used. [unreadVariable]
+        rest = buflen;
+             ^
+port/ehci/usb_hc_ehci.c:360:23: style: Variable 'xfer_len' is assigned a value that is never used. [unreadVariable]
+    uint32_t xfer_len = 0;
+                      ^
+port/ehci/usb_hc_ehci.c:453:23: style: Variable 'xfer_len' is assigned a value that is never used. [unreadVariable]
+    uint32_t xfer_len = 0;
+                      ^
+port/fsdev/usb_dc_fsdev.c:310:21: style: The scope of the variable 'wEPVal' can be reduced. [variableScope]
+    uint16_t wIstr, wEPVal;
+                    ^
+port/fsdev/usb_dc_fsdev.c:311:13: style: The scope of the variable 'ep_idx' can be reduced. [variableScope]
+    uint8_t ep_idx;
+            ^
+port/fsdev/usb_dc_fsdev.c:312:13: style: The scope of the variable 'read_count' can be reduced. [variableScope]
+    uint8_t read_count;
+            ^
+port/fsdev/usb_dc_fsdev.c:313:14: style: The scope of the variable 'write_count' can be reduced. [variableScope]
+    uint16_t write_count;
+             ^
+port/fsdev/usb_dc_fsdev.c:314:14: style: The scope of the variable 'store_ep' can be reduced. [variableScope]
+    uint16_t store_ep[8];
+             ^
+port/fsdev/usb_dc_fsdev.c:33:13: style: struct member 'fsdev_ep_state::ep_stalled' is never used. [unusedStructMember]
+    uint8_t ep_stalled;      /* Endpoint stall flag */
+            ^
+port/hpm/usb_dc_hpm.c:209:14: style: The scope of the variable 'transfer_len' can be reduced. [variableScope]
+    uint32_t transfer_len;
+             ^
+port/musb/usb_dc_musb.c:148:15: style: The scope of the variable 'buf32' can be reduced. [variableScope]
+    uint32_t *buf32;
+              ^
+port/musb/usb_dc_musb.c:150:14: style: The scope of the variable 'count32' can be reduced. [variableScope]
+    uint32_t count32;
+             ^
+port/musb/usb_dc_musb.c:151:14: style: The scope of the variable 'count8' can be reduced. [variableScope]
+    uint32_t count8;
+             ^
+port/musb/usb_dc_musb.c:152:9: style: The scope of the variable 'i' can be reduced. [variableScope]
+    int i;
+        ^
+port/musb/usb_dc_musb.c:179:15: style: The scope of the variable 'buf32' can be reduced. [variableScope]
+    uint32_t *buf32;
+              ^
+port/musb/usb_dc_musb.c:181:14: style: The scope of the variable 'count32' can be reduced. [variableScope]
+    uint32_t count32;
+             ^
+port/musb/usb_dc_musb.c:182:14: style: The scope of the variable 'count8' can be reduced. [variableScope]
+    uint32_t count8;
+             ^
+port/musb/usb_dc_musb.c:183:9: style: The scope of the variable 'i' can be reduced. [variableScope]
+    int i;
+        ^
+port/musb/usb_dc_musb.c:210:14: style: The scope of the variable 'size' can be reduced. [variableScope]
+    uint32_t size;
+             ^
+port/musb/usb_dc_musb.c:282:12: error: Uninitialized variable: speed [uninitvar]
+    return speed;
+           ^
+port/musb/usb_dc_musb.c:115:13: style: struct member 'musb_ep_state::ep_stalled' is never used. [unusedStructMember]
+    uint8_t ep_stalled; /* Endpoint stall flag */
+            ^
+port/musb/usb_hc_musb.c:0:0: information: This file is not analyzed. Cppcheck failed to extract a valid configuration. Use -v for more details. [noValidConfiguration]
+
+^
+port/nrf5x/usb_dc_nrf5x.c:588:21: style: The scope of the variable 'usb_event' can be reduced. [variableScope]
+  volatile uint32_t usb_event = 0;
+                    ^
+port/nrf5x/usb_dc_nrf5x.c:67:11: style: struct member '_usbd_ep_info::ep_stalled' is never used. [unusedStructMember]
+  uint8_t ep_stalled; /* Endpoint stall flag */
+          ^
+port/nrf5x/usb_dc_nrf5x.c:75:20: style: struct member '_usbd_ep_info::add_flag' is never used. [unusedStructMember]
+  volatile uint8_t add_flag;
+                   ^
+port/rp2040/usb_dc_rp2040.c:306:23: style: The scope of the variable 'value' can be reduced. [variableScope]
+    volatile uint32_t value = 0;
+                      ^
+port/rp2040/usb_dc_rp2040.c:267:19: style: Variable 'size' is assigned a value that is never used. [unreadVariable]
+    uint16_t size = 0;
+                  ^
+port/rp2040/usb_dc_rp2040.c:442:27: style: Variable 'data_len' is assigned a value that is never used. [unreadVariable]
+        uint16_t data_len = 0;
+                          ^
+port/template/usb_dc.c:15:13: style: struct member 'usb_dc_ep_state::ep_stalled' is never used. [unusedStructMember]
+    uint8_t ep_stalled; /* Endpoint stall flag */
+            ^
+port/template/usb_dc.c:91:14: style: Unused variable: tmp [unusedVariable]
+    uint32_t tmp;
+             ^
+port/template/usb_hc.c:310:12: warning: Either the condition '!urb' is redundant or there is possible null pointer dereference: urb. [nullPointerRedundantCheck]
+    pipe = urb->pipe;
+           ^
+port/template/usb_hc.c:312:9: note: Assuming that condition '!urb' is not redundant
+    if (!urb || !pipe) {
+        ^
+port/template/usb_hc.c:310:12: note: Null pointer dereference
+    pipe = urb->pipe;
+           ^
+port/template/usb_hc.c:72:9: style: Unused variable: ret [unusedVariable]
+    int ret;
+        ^
+port/template/usb_hc.c:308:12: style: Unused variable: flags [unusedVariable]
+    size_t flags;
+           ^
+port/xhci/usb_hc_xhci.c:87:8: style: Suspicious condition (assignment + comparison); Clarify expression with parentheses. [clarifyCondition]
+    if (rc = xhci_probe(xhci, usb_hc_get_register_base()) != 0) {
+       ^
+port/xhci/usb_hc_xhci.c:91:8: style: Suspicious condition (assignment + comparison); Clarify expression with parentheses. [clarifyCondition]
+    if (rc = xhci_open(xhci) != 0 ) {
+       ^
+port/xhci/usb_hc_xhci.c:397:12: warning: Either the condition 'ppipe' is redundant or there is possible null pointer dereference: ppipe. [nullPointerRedundantCheck]
+    return ppipe->slot->id;
+           ^
+port/xhci/usb_hc_xhci.c:396:16: note: Assuming that condition 'ppipe' is not redundant
+    USB_ASSERT(ppipe && (ppipe->slot));
+               ^
+port/xhci/usb_hc_xhci.c:395:35: note: Assignment to 'ppipe=(struct xhci_endpoint*)pipe'
+    struct xhci_endpoint *ppipe = (struct xhci_endpoint *)pipe;
+                                  ^
+port/xhci/usb_hc_xhci.c:397:12: note: Null pointer dereference
+    return ppipe->slot->id;
+           ^
+port/xhci/usb_hc_xhci.c:169:43: portability: 'xhci->op' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+                portsc = readl ( xhci->op + XHCI_OP_PORTSC ( port ) );
+                                          ^
+port/xhci/usb_hc_xhci.c:195:29: portability: 'xhci->op' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+    writel(pclear, xhci->op + XHCI_OP_PORTSC ( port ));
+                            ^
+port/xhci/usb_hc_xhci.c:223:43: portability: 'xhci->op' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+                portsc = readl ( xhci->op + XHCI_OP_PORTSC ( port ) );
+                                          ^
+port/xhci/usb_hc_xhci.c:233:45: portability: 'xhci->op' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+                    writel ( temp, xhci->op + XHCI_OP_PORTSC ( port ) );
+                                            ^
+port/xhci/usb_hc_xhci.c:497:28: portability: 'xhci->op' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ usbsts = readl ( xhci->op + XHCI_OP_USBSTS );
+                           ^
+port/xhci/usb_hc_xhci.c:499:26: portability: 'xhci->op' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ writel(usbsts, xhci->op + XHCI_OP_USBSTS);
+                         ^
+port/xhci/usb_hc_xhci.c:502:28: portability: 'xhci->run' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ runtime = readl(xhci->run + XHCI_RUN_IR_IMAN ( 0 ));
+                           ^
+port/xhci/usb_hc_xhci.c:504:29: portability: 'xhci->run' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ writel (runtime, xhci->run + XHCI_RUN_IR_IMAN ( 0 ));
+                            ^
+port/xhci/usb_hc_xhci.c:211:29: style: Variable 'ret' is assigned a value that is never used. [unreadVariable]
+                        ret = xhci_port_enable(xhci, port);
+                            ^
+port/xhci/usb_hc_xhci.c:402:13: style: Variable 'ret' is assigned a value that is never used. [unreadVariable]
+    int ret = 0;
+            ^
+port/xhci/usb_hc_xhci.c:506:15: style: Variable 'work_pipe' is assigned a value that is never used. [unreadVariable]
+    work_pipe = xhci_event_process(xhci);
+              ^
+port/xhci/xhci.c:519:2: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+ snprintf ( buf, sizeof ( buf ), "%d%sbps",
+ ^
+port/xhci/xhci.c:729:2: style:inconclusive: Statements following return, break, continue, goto or throw will never be executed. [unreachableCode]
+ usb_free ( scratch->array );
+ ^
+port/xhci/xhci.c:823:2: style:inconclusive: Statements following return, break, continue, goto or throw will never be executed. [unreachableCode]
+ xhci_writeq ( xhci, 0, xhci->run + XHCI_RUN_ERSTBA ( 0 ) );
+ ^
+port/xhci/xhci.c:985:2: style:inconclusive: Statements following return, break, continue, goto or throw will never be executed. [unreachableCode]
+ xhci_stop ( xhci );
+ ^
+port/xhci/xhci.c:1839:2: style:inconclusive: Statements following return, break, continue, goto or throw will never be executed. [unreachableCode]
+ xhci->dcbaa.context[id] = 0;
+ ^
+port/xhci/xhci.c:331:10: style: The scope of the variable 'bios' can be reduced. [variableScope]
+ uint8_t bios;
+         ^
+port/xhci/xhci.c:405:11: style: The scope of the variable 'usbsts' can be reduced. [variableScope]
+ uint32_t usbsts;
+          ^
+port/xhci/xhci.c:436:11: style: The scope of the variable 'usbcmd' can be reduced. [variableScope]
+ uint32_t usbcmd;
+          ^
+port/xhci/xhci.c:478:15: style: The scope of the variable 'offset' can be reduced. [variableScope]
+ unsigned int offset;
+              ^
+port/xhci/xhci.c:479:15: style: The scope of the variable 'count' can be reduced. [variableScope]
+ unsigned int count;
+              ^
+port/xhci/xhci.c:480:11: style: The scope of the variable 'ports' can be reduced. [variableScope]
+ uint32_t ports;
+          ^
+port/xhci/xhci.c:1169:11: style: The scope of the variable 'psi' can be reduced. [variableScope]
+ uint32_t psi;
+          ^
+port/xhci/xhci.c:1223:15: style: The scope of the variable 'mantissa' can be reduced. [variableScope]
+ unsigned int mantissa;
+              ^
+port/xhci/xhci.c:1224:15: style: The scope of the variable 'exponent' can be reduced. [variableScope]
+ unsigned int exponent;
+              ^
+port/xhci/xhci.c:1228:11: style: The scope of the variable 'psi' can be reduced. [variableScope]
+ uint32_t psi;
+          ^
+port/xhci/xhci.c:2230:24: style: The scope of the variable 'data' can be reduced. [variableScope]
+ struct xhci_trb_data *data;
+                       ^
+port/xhci/xhci.c:2568:18: style: The scope of the variable 'evt_type' can be reduced. [variableScope]
+    unsigned int evt_type;
+                 ^
+port/xhci/xhci.c:2569:18: style: The scope of the variable 'evt_cc' can be reduced. [variableScope]
+    unsigned int evt_cc;
+                 ^
+port/xhci/xhci.c:1367:28: style:inconclusive: Function 'xhci_event_wait' argument 2 names different: declaration 'pipe' definition 'ep'. [funcArgNamesDifferent]
+     struct xhci_endpoint *ep,
+                           ^
+port/xhci/xhci.h:912:28: note: Function 'xhci_event_wait' argument 2 names different: declaration 'pipe' definition 'ep'.
+     struct xhci_endpoint *pipe,
+                           ^
+port/xhci/xhci.c:1367:28: note: Function 'xhci_event_wait' argument 2 names different: declaration 'pipe' definition 'ep'.
+     struct xhci_endpoint *ep,
+                           ^
+port/xhci/xhci.c:1776:70: style:inconclusive: Function 'xhci_device_open' argument 2 names different: declaration 'pipe' definition 'ep'. [funcArgNamesDifferent]
+int xhci_device_open ( struct xhci_host *xhci, struct xhci_endpoint *ep, int *slot_id ) {
+                                                                     ^
+port/xhci/xhci.h:880:70: note: Function 'xhci_device_open' argument 2 names different: declaration 'pipe' definition 'ep'.
+int xhci_device_open ( struct xhci_host *xhci, struct xhci_endpoint *pipe, int *slot_id );
+                                                                     ^
+port/xhci/xhci.c:1776:70: note: Function 'xhci_device_open' argument 2 names different: declaration 'pipe' definition 'ep'.
+int xhci_device_open ( struct xhci_host *xhci, struct xhci_endpoint *ep, int *slot_id ) {
+                                                                     ^
+port/xhci/xhci.c:1862:97: style:inconclusive: Function 'xhci_device_address' argument 3 names different: declaration 'pipe' definition 'ep'. [funcArgNamesDifferent]
+int xhci_device_address ( struct xhci_host *xhci, struct xhci_slot *slot, struct xhci_endpoint *ep ) {
+                                                                                                ^
+port/xhci/xhci.h:883:97: note: Function 'xhci_device_address' argument 3 names different: declaration 'pipe' definition 'ep'.
+int xhci_device_address ( struct xhci_host *xhci, struct xhci_slot *slot, struct xhci_endpoint *pipe );
+                                                                                                ^
+port/xhci/xhci.c:1862:97: note: Function 'xhci_device_address' argument 3 names different: declaration 'pipe' definition 'ep'.
+int xhci_device_address ( struct xhci_host *xhci, struct xhci_slot *slot, struct xhci_endpoint *ep ) {
+                                                                                                ^
+port/xhci/xhci.c:2085:101: style:inconclusive: Function 'xhci_ctrl_endpoint_open' argument 3 names different: declaration 'pipe' definition 'ep'. [funcArgNamesDifferent]
+int xhci_ctrl_endpoint_open ( struct xhci_host *xhci, struct xhci_slot *slot, struct xhci_endpoint *ep ) {
+                                                                                                    ^
+port/xhci/xhci.h:889:101: note: Function 'xhci_ctrl_endpoint_open' argument 3 names different: declaration 'pipe' definition 'ep'.
+int xhci_ctrl_endpoint_open ( struct xhci_host *xhci, struct xhci_slot *slot, struct xhci_endpoint *pipe );
+                                                                                                    ^
+port/xhci/xhci.c:2085:101: note: Function 'xhci_ctrl_endpoint_open' argument 3 names different: declaration 'pipe' definition 'ep'.
+int xhci_ctrl_endpoint_open ( struct xhci_host *xhci, struct xhci_slot *slot, struct xhci_endpoint *ep ) {
+                                                                                                    ^
+port/xhci/xhci.c:2127:101: style:inconclusive: Function 'xhci_work_endpoint_open' argument 3 names different: declaration 'pipe' definition 'ep'. [funcArgNamesDifferent]
+int xhci_work_endpoint_open ( struct xhci_host *xhci, struct xhci_slot *slot, struct xhci_endpoint *ep ) {
+                                                                                                    ^
+port/xhci/xhci.h:892:101: note: Function 'xhci_work_endpoint_open' argument 3 names different: declaration 'pipe' definition 'ep'.
+int xhci_work_endpoint_open ( struct xhci_host *xhci, struct xhci_slot *slot, struct xhci_endpoint *pipe );
+                                                                                                    ^
+port/xhci/xhci.c:2127:101: note: Function 'xhci_work_endpoint_open' argument 3 names different: declaration 'pipe' definition 'ep'.
+int xhci_work_endpoint_open ( struct xhci_host *xhci, struct xhci_slot *slot, struct xhci_endpoint *ep ) {
+                                                                                                    ^
+port/xhci/xhci.c:170:21: portability: 'reg' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  writel ( 0, ( reg + sizeof ( uint32_t ) ) );
+                    ^
+port/xhci/xhci.c:205:32: portability: 'xhci->cap' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ caplength = readb ( xhci->cap + XHCI_CAP_CAPLENGTH );
+                               ^
+port/xhci/xhci.c:206:29: portability: 'xhci->cap' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ rtsoff = readl ( xhci->cap + XHCI_CAP_RTSOFF );
+                            ^
+port/xhci/xhci.c:207:28: portability: 'xhci->cap' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ dboff = readl ( xhci->cap + XHCI_CAP_DBOFF );
+                           ^
+port/xhci/xhci.c:208:25: portability: 'xhci->cap' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ xhci->op = ( xhci->cap + caplength );
+                        ^
+port/xhci/xhci.c:209:26: portability: 'xhci->cap' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ xhci->run = ( xhci->cap + rtsoff );
+                         ^
+port/xhci/xhci.c:210:25: portability: 'xhci->cap' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ xhci->db = ( xhci->cap + dboff );
+                        ^
+port/xhci/xhci.c:213:41: portability: 'xhci->cap' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+    xhci->version = ((readl ( xhci->cap + XHCI_CAP_CAPLENGTH ) >> 16) & 0xffff);
+                                        ^
+port/xhci/xhci.c:225:33: portability: 'xhci->cap' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ hcsparams1 = readl ( xhci->cap + XHCI_CAP_HCSPARAMS1 );
+                                ^
+port/xhci/xhci.c:233:33: portability: 'xhci->cap' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ hcsparams2 = readl ( xhci->cap + XHCI_CAP_HCSPARAMS2 );
+                                ^
+port/xhci/xhci.c:239:33: portability: 'xhci->cap' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ hccparams1 = readl ( xhci->cap + XHCI_CAP_HCCPARAMS1 );
+                                ^
+port/xhci/xhci.c:247:30: portability: 'xhci->op' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ pagesize = readl ( xhci->op + XHCI_OP_PAGESIZE );
+                             ^
+port/xhci/xhci.c:274:29: portability: 'xhci->cap' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+   xecp = readl ( xhci->cap + offset );
+                            ^
+port/xhci/xhci.c:284:28: portability: 'xhci->cap' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  xecp = readl ( xhci->cap + offset );
+                           ^
+port/xhci/xhci.c:309:67: portability: 'xhci->cap' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ USB_LOG_DBG("XHCI %s bios offset 0x%x\n", xhci->name, (xhci->cap + legacy + XHCI_USBLEGSUP_BIOS));
+                                                                  ^
+port/xhci/xhci.c:309:76: portability: 'xhci->cap+legacy' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ USB_LOG_DBG("XHCI %s bios offset 0x%x\n", xhci->name, (xhci->cap + legacy + XHCI_USBLEGSUP_BIOS));
+                                                                           ^
+port/xhci/xhci.c:311:27: portability: 'xhci->cap' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ bios = readl ( xhci->cap + legacy );
+                          ^
+port/xhci/xhci.c:340:14: portability: 'xhci->cap' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+   xhci->cap + xhci->legacy + XHCI_USBLEGSUP_OS );
+             ^
+port/xhci/xhci.c:340:29: portability: 'xhci->cap+xhci->legacy' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+   xhci->cap + xhci->legacy + XHCI_USBLEGSUP_OS );
+                            ^
+port/xhci/xhci.c:346:28: portability: 'xhci->cap' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  bios = readb ( xhci->cap + xhci->legacy + XHCI_USBLEGSUP_BIOS );
+                           ^
+port/xhci/xhci.c:346:43: portability: 'xhci->cap+xhci->legacy' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  bios = readb ( xhci->cap + xhci->legacy + XHCI_USBLEGSUP_BIOS );
+                                          ^
+port/xhci/xhci.c:350:31: portability: 'xhci->cap' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+   ctlsts = readl ( xhci->cap + xhci->legacy +
+                              ^
+port/xhci/xhci.c:350:46: portability: 'xhci->cap+xhci->legacy' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+   ctlsts = readl ( xhci->cap + xhci->legacy +
+                                             ^
+port/xhci/xhci.c:368:24: portability: 'xhci->cap' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ writel ( 0, xhci->cap + xhci->legacy + XHCI_USBLEGSUP_CTLSTS );
+                       ^
+port/xhci/xhci.c:368:39: portability: 'xhci->cap+xhci->legacy' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ writel ( 0, xhci->cap + xhci->legacy + XHCI_USBLEGSUP_CTLSTS );
+                                      ^
+port/xhci/xhci.c:393:24: portability: 'xhci->cap' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ writeb ( 0, xhci->cap + xhci->legacy + XHCI_USBLEGSUP_OS );
+                       ^
+port/xhci/xhci.c:393:39: portability: 'xhci->cap+xhci->legacy' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ writeb ( 0, xhci->cap + xhci->legacy + XHCI_USBLEGSUP_OS );
+                                      ^
+port/xhci/xhci.c:409:28: portability: 'xhci->op' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ usbcmd = readl ( xhci->op + XHCI_OP_USBCMD );
+                           ^
+port/xhci/xhci.c:411:28: portability: 'xhci->op' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ writel ( usbcmd, xhci->op + XHCI_OP_USBCMD );
+                           ^
+port/xhci/xhci.c:417:29: portability: 'xhci->op' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  usbsts = readl ( xhci->op + XHCI_OP_USBSTS );
+                            ^
+port/xhci/xhci.c:449:39: portability: 'xhci->op' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ writel ( XHCI_USBCMD_HCRST, xhci->op + XHCI_OP_USBCMD );
+                                      ^
+port/xhci/xhci.c:455:29: portability: 'xhci->op' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  usbcmd = readl ( xhci->op + XHCI_OP_USBCMD );
+                            ^
+port/xhci/xhci.c:488:29: portability: 'xhci->cap' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  ports = readl ( xhci->cap + supported + XHCI_SUPPORTED_PORTS );
+                            ^
+port/xhci/xhci.c:488:41: portability: 'xhci->cap+supported' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  ports = readl ( xhci->cap + supported + XHCI_SUPPORTED_PORTS );
+                                        ^
+port/xhci/xhci.c:553:31: portability: 'xhci->cap' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ revision = readl ( xhci->cap + supported + XHCI_SUPPORTED_REVISION );
+                              ^
+port/xhci/xhci.c:553:43: portability: 'xhci->cap+supported' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ revision = readl ( xhci->cap + supported + XHCI_SUPPORTED_REVISION );
+                                          ^
+port/xhci/xhci.c:559:14: portability: 'xhci->cap' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  name.raw = CPU_TO_LE32 ( readl ( xhci->cap + supported +
+             ^
+port/xhci/xhci.c:559:14: portability: 'xhci->cap+supported' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  name.raw = CPU_TO_LE32 ( readl ( xhci->cap + supported +
+             ^
+port/xhci/xhci.c:562:28: portability: 'xhci->cap' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  slot = readl ( xhci->cap + supported + XHCI_SUPPORTED_SLOT );
+                           ^
+port/xhci/xhci.c:562:40: portability: 'xhci->cap+supported' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  slot = readl ( xhci->cap + supported + XHCI_SUPPORTED_SLOT );
+                                       ^
+port/xhci/xhci.c:566:29: portability: 'xhci->cap' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  ports = readl ( xhci->cap + supported + XHCI_SUPPORTED_PORTS );
+                            ^
+port/xhci/xhci.c:566:41: portability: 'xhci->cap+supported' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  ports = readl ( xhci->cap + supported + XHCI_SUPPORTED_PORTS );
+                                        ^
+port/xhci/xhci.c:571:29: portability: 'xhci->cap' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+    psi = readl ( xhci->cap + supported +
+                            ^
+port/xhci/xhci.c:571:41: portability: 'xhci->cap+supported' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+    psi = readl ( xhci->cap + supported +
+                                        ^
+port/xhci/xhci.c:654:16: portability: 'xhci->op' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+      xhci->op + XHCI_OP_DCBAAP ) ) != 0 )
+               ^
+port/xhci/xhci.c:761:16: portability: 'xhci->op' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+      xhci->op + XHCI_OP_CRCR ) ) != 0 )
+               ^
+port/xhci/xhci.c:806:24: portability: 'xhci->run' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ writel ( 1, xhci->run + XHCI_RUN_ERSTSZ ( 0 ) ); /* bit[15:0] event ring segment table size */
+                       ^
+port/xhci/xhci.c:808:17: portability: 'xhci->run' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+      xhci->run + XHCI_RUN_ERDP ( 0 ) ) ) != 0 ) /* bit[63:4] event ring dequeue pointer */
+                ^
+port/xhci/xhci.c:811:17: portability: 'xhci->run' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+      xhci->run + XHCI_RUN_ERSTBA ( 0 ) ) ) != 0 ) /* bit[63:6] event ring segment table base addr */
+                ^
+port/xhci/xhci.c:823:35: portability: 'xhci->run' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ xhci_writeq ( xhci, 0, xhci->run + XHCI_RUN_ERSTBA ( 0 ) );
+                                  ^
+port/xhci/xhci.c:825:35: portability: 'xhci->run' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ xhci_writeq ( xhci, 0, xhci->run + XHCI_RUN_ERDP ( 0 ) );
+                                  ^
+port/xhci/xhci.c:845:28: portability: 'xhci->op' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ config = readl ( xhci->op + XHCI_OP_CONFIG );
+                           ^
+port/xhci/xhci.c:848:28: portability: 'xhci->op' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ writel ( config, xhci->op + XHCI_OP_CONFIG );
+                           ^
+port/xhci/xhci.c:851:27: portability: 'xhci->run' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ writel ( 500U, xhci->run + XHCI_RUN_IR_IMOD ( 0 ) );
+                          ^
+port/xhci/xhci.c:852:28: portability: 'xhci->run' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ runtime = readl(xhci->run + XHCI_RUN_IR_IMAN ( 0 ));
+                           ^
+port/xhci/xhci.c:854:29: portability: 'xhci->run' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ writel (runtime, xhci->run + XHCI_RUN_IR_IMAN ( 0 ));
+                            ^
+port/xhci/xhci.c:857:28: portability: 'xhci->op' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ usbcmd = readl ( xhci->op + XHCI_OP_USBCMD );
+                           ^
+port/xhci/xhci.c:859:28: portability: 'xhci->op' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ writel ( usbcmd, xhci->op + XHCI_OP_USBCMD );
+                           ^
+port/xhci/xhci.c:872:24: portability: 'xhci->run' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ writel ( 0, xhci->run + XHCI_RUN_ERSTSZ ( 0 ) );
+                       ^
+port/xhci/xhci.c:873:35: portability: 'xhci->run' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ xhci_writeq ( xhci, 0, xhci->run + XHCI_RUN_ERSTBA ( 0 ) );
+                                  ^
+port/xhci/xhci.c:874:35: portability: 'xhci->run' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ xhci_writeq ( xhci, 0, xhci->run + XHCI_RUN_ERDP ( 0 ) );
+                                  ^
+port/xhci/xhci.c:891:34: portability: 'xhci->op' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ USB_ASSERT ( ( readl ( xhci->op + XHCI_OP_CRCR ) & XHCI_CRCR_CRR ) == 0 );
+                                 ^
+port/xhci/xhci.c:894:34: portability: 'xhci->op' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ xhci_writeq ( xhci, 0, xhci->op + XHCI_OP_CRCR );
+                                 ^
+port/xhci/xhci.c:941:34: portability: 'xhci->op' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ xhci_writeq ( xhci, 0, xhci->op + XHCI_OP_DCBAAP );
+                                 ^
+port/xhci/xhci.c:1048:37: portability: 'xhci->op' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ uint32_t portsc = readl ( xhci->op + XHCI_OP_PORTSC ( port ) );
+                                    ^
+port/xhci/xhci.c:1064:48: portability: 'xhci->op' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  writel ((portsc | XHCI_PORTSC_PR), (xhci->op + XHCI_OP_PORTSC ( port )));  /* reset port */
+                                               ^
+port/xhci/xhci.c:1074:29: portability: 'xhci->op' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  portsc = readl ( xhci->op + XHCI_OP_PORTSC ( port ) );
+                            ^
+port/xhci/xhci.c:1176:28: portability: 'xhci->cap' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ ports = readl ( xhci->cap + supported + XHCI_SUPPORTED_PORTS );
+                           ^
+port/xhci/xhci.c:1176:40: portability: 'xhci->cap+supported' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ ports = readl ( xhci->cap + supported + XHCI_SUPPORTED_PORTS );
+                                       ^
+port/xhci/xhci.c:1182:27: portability: 'xhci->cap' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  psi = readl ( xhci->cap + supported +
+                          ^
+port/xhci/xhci.c:1182:39: portability: 'xhci->cap+supported' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  psi = readl ( xhci->cap + supported +
+                                      ^
+port/xhci/xhci.c:1235:28: portability: 'xhci->cap' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ ports = readl ( xhci->cap + supported + XHCI_SUPPORTED_PORTS );
+                           ^
+port/xhci/xhci.c:1235:40: portability: 'xhci->cap+supported' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ ports = readl ( xhci->cap + supported + XHCI_SUPPORTED_PORTS );
+                                       ^
+port/xhci/xhci.c:1254:27: portability: 'xhci->cap' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  psi = readl ( xhci->cap + supported + XHCI_SUPPORTED_PSI ( i ));
+                          ^
+port/xhci/xhci.c:1254:39: portability: 'xhci->cap+supported' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  psi = readl ( xhci->cap + supported + XHCI_SUPPORTED_PSI ( i ));
+                                      ^
+port/xhci/xhci.c:1285:28: portability: 'xhci->op' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ portsc = readl ( xhci->op + XHCI_OP_PORTSC ( port ) );
+                           ^
+port/xhci/xhci.c:1396:27: portability: 'xhci->db' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ writel ( value, xhci->db + slotid * XHCI_REG_DB_SIZE ); /* bit[7:0] db target, is ep_id */
+                          ^
+port/xhci/xhci.c:1409:45: portability: 'xhci->op' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ xhci_writeq ( xhci, XHCI_CRCR_CA, xhci->op + XHCI_OP_CRCR );
+                                            ^
+port/xhci/xhci.c:1415:34: portability: 'xhci->op' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ USB_ASSERT ( ( readl ( xhci->op + XHCI_OP_CRCR ) & XHCI_CRCR_CRR ) == 0 );
+                                 ^
+port/xhci/xhci.c:1425:85: portability: 'xhci->op' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ xhci_writeq ( xhci, ( (uint64_t)(uintptr_t)xhci->cmds | xhci->cmds->cs ), xhci->op + XHCI_OP_CRCR );
+                                                                                    ^
+port/xhci/xhci.c:1628:21: portability: 'input' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ slot_ctx = ( input + xhci_input_context_offset ( xhci, XHCI_CTX_SLOT ));
+                    ^
+port/xhci/xhci.c:1636:19: portability: 'input' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ ep_ctx = ( input + xhci_input_context_offset ( xhci, XHCI_CTX_EP0 ) );
+                  ^
+port/xhci/xhci.c:1762:27: portability: 'xhci->cap' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ slot = readl ( xhci->cap + supported + XHCI_SUPPORTED_SLOT );
+                          ^
+port/xhci/xhci.c:1762:39: portability: 'xhci->cap+supported' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ slot = readl ( xhci->cap + supported + XHCI_SUPPORTED_SLOT );
+                                      ^
+port/xhci/xhci.c:1951:21: portability: 'input' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ slot_ctx = ( input + xhci_input_context_offset ( xhci, XHCI_CTX_SLOT ));
+                    ^
+port/xhci/xhci.c:1958:19: portability: 'input' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ ep_ctx = ( input + xhci_input_context_offset ( xhci, endpoint->ctx ) );
+                  ^
+port/xhci/xhci.c:2046:21: portability: 'input' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ slot_ctx = ( input + xhci_input_context_offset ( xhci, XHCI_CTX_SLOT ));
+                    ^
+port/xhci/xhci.c:2102:47: portability: '(void*)slot->context' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ ep->context = ( ( ( void * ) slot->context ) +
+                                              ^
+port/xhci/xhci.c:2169:47: portability: '(void*)slot->context' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ ep->context = ( ( ( void * ) slot->context ) +
+                                              ^
+port/xhci/xhci.c:2355:21: portability: 'input' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ slot_ctx = ( input + xhci_input_context_offset ( xhci, XHCI_CTX_SLOT ));
+                    ^
+port/xhci/xhci.c:2360:19: portability: 'input' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ ep_ctx = ( input + xhci_input_context_offset ( xhci, endpoint->ctx ) );
+                  ^
+port/xhci/xhci.c:2423:28: portability: 'xhci->op' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ portsc = readl ( xhci->op + XHCI_OP_PORTSC ( trb->port ) );
+                           ^
+port/xhci/xhci.c:2628:15: portability: 'xhci->run' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+    xhci->run + XHCI_RUN_ERDP ( 0 ) );
+              ^
+port/xhci/xhci.c:1952:19: error: Signed integer overflow for expression '(32-1)<<27'. [integerOverflow]
+ slot_ctx->info = CPU_TO_LE32 ( XHCI_SLOT_INFO ( ( XHCI_CTX_END - 1 ),
+                  ^
+port/xhci/xhci.c:2047:19: error: Signed integer overflow for expression '(32-1)<<27'. [integerOverflow]
+ slot_ctx->info = CPU_TO_LE32 ( XHCI_SLOT_INFO ( ( XHCI_CTX_END - 1 ),
+                  ^
+port/xhci/xhci.c:2356:19: error: Signed integer overflow for expression '(32-1)<<27'. [integerOverflow]
+ slot_ctx->info = CPU_TO_LE32 ( XHCI_SLOT_INFO ( ( XHCI_CTX_END - 1 ),
+                  ^
+port/xhci/xhci.c:444:12: style: Variable 'rc' is assigned a value that is never used. [unreadVariable]
+ if ( ( rc = xhci_stop ( xhci ) ) != 0 ) {
+           ^
+port/xhci/xhci.c:782:15: style: Unused variable: count [unusedVariable]
+ unsigned int count;
+              ^
+port/xhci/xhci.c:783:9: style: Unused variable: len [unusedVariable]
+ size_t len;
+        ^
+port/xhci/xhci.c:919:12: style: Variable 'array_len' is assigned a value that is never used. [unreadVariable]
+ array_len = ( scratch->count * sizeof ( scratch->array[0] ) );
+           ^
+port/xhci/xhci.c:923:13: style: Variable 'buffer_len' is assigned a value that is never used. [unreadVariable]
+ buffer_len = ( scratch->count * xhci->pagesize );
+            ^
+port/xhci/xhci.c:944:6: style: Variable 'len' is assigned a value that is never used. [unreadVariable]
+ len = ( ( xhci->slots + 1 ) * sizeof ( xhci->dcbaa.context[0] ) );
+     ^
+port/xhci/xhci.c:1166:15: style: Unused variable: speed [unusedVariable]
+ unsigned int speed;
+              ^
+port/xhci/xhci.c:1405:12: style: Unused variable: crp [unusedVariable]
+ uintptr_t crp;
+           ^
+port/xhci/xhci.c:1898:13: style: Variable 'len' is assigned a value that is never used. [unreadVariable]
+ size_t len = xhci_device_context_offset ( xhci, XHCI_CTX_END );
+            ^
+port/xhci/xhci.c:1903:12: style: Variable 'rc' is assigned a value that is never used. [unreadVariable]
+ if ( ( rc = xhci_disable_slot ( xhci, slot->endpoint[0], id ) ) != 0 ) {
+           ^
+port/xhci/xhci.c:2129:15: style: Unused variable: interval [unusedVariable]
+ unsigned int interval;
+              ^
+port/xhci/xhci.c:2446:6: style: Unused variable: rc [unusedVariable]
+ int rc;
+     ^
+port/xhci/xhci.c:2517:6: style: Unused variable: rc [unusedVariable]
+ int rc;
+     ^
+port/xhci/xhci.c:2554:5: style: Variable 'rc' is assigned a value that is never used. [unreadVariable]
+ rc = -( trb->code );
+    ^
+port/xhci/xhci_dbg.c:59:28: portability: 'xhci->op' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ usbcmd = readl ( xhci->op + XHCI_OP_USBCMD );
+                           ^
+port/xhci/xhci_dbg.c:65:28: portability: 'xhci->op' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ usbsts = readl ( xhci->op + XHCI_OP_USBSTS );
+                           ^
+port/xhci/xhci_dbg.c:70:30: portability: 'xhci->op' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ pagesize = readl ( xhci->op + XHCI_OP_PAGESIZE );
+                             ^
+port/xhci/xhci_dbg.c:74:28: portability: 'xhci->op' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ dnctrl = readl ( xhci->op + XHCI_OP_DNCTRL );
+                           ^
+port/xhci/xhci_dbg.c:78:28: portability: 'xhci->op' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ config = readl ( xhci->op + XHCI_OP_CONFIG );
+                           ^
+port/xhci/xhci_dbg.c:98:28: portability: 'xhci->op' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ portsc = readl ( xhci->op + XHCI_OP_PORTSC ( port ) );
+                           ^
+port/xhci/xhci_dbg.c:108:30: portability: 'xhci->op' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ portpmsc = readl ( xhci->op + XHCI_OP_PORTPMSC ( port ) );
+                             ^
+port/xhci/xhci_dbg.c:112:28: portability: 'xhci->op' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ portli = readl ( xhci->op + XHCI_OP_PORTLI ( port ) );
+                           ^
+port/xhci/xhci_dbg.c:116:31: portability: 'xhci->op' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ porthlpmc = readl ( xhci->op + XHCI_OP_PORTHLPMC ( port ) );
+                              ^
+third_party/FreeRTOS-10.4/event_groups.c:536:18: style: The scope of the variable 'pxListItem' can be reduced. [variableScope]
+    ListItem_t * pxListItem, * pxNext;
+                 ^
+third_party/FreeRTOS-10.4/event_groups.c:541:28: style: Variable 'xMatchFound' is assigned a value that is never used. [unreadVariable]
+    BaseType_t xMatchFound = pdFALSE;
+                           ^
+third_party/FreeRTOS-10.4/portable/GCC/ARM_CM0/port.c:167:20: style: Condition 'ulDummy==0' is always true [knownConditionTrueFalse]
+    while( ulDummy == 0 )
+                   ^
+third_party/FreeRTOS-10.4/portable/GCC/ARM_CM0/port.c:156:33: note: Assignment 'ulDummy=0UL', assigned value is 0
+    volatile uint32_t ulDummy = 0UL;
+                                ^
+third_party/FreeRTOS-10.4/portable/GCC/ARM_CM0/port.c:167:20: note: Condition 'ulDummy==0' is always true
+    while( ulDummy == 0 )
+                   ^
+third_party/FreeRTOS-10.4/portable/GCC/ARM_CM0/port.c:145:0: information: Skipping configuration 'configTASK_RETURN_ADDRESS' since the value of 'configTASK_RETURN_ADDRESS' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    *pxTopOfStack = ( StackType_t ) portTASK_RETURN_ADDRESS; /* LR */
+^
+third_party/FreeRTOS-10.4/portable/GCC/ARM_CM3/port.c:209:20: style: Condition 'ulDummy==0' is always true [knownConditionTrueFalse]
+    while( ulDummy == 0 )
+                   ^
+third_party/FreeRTOS-10.4/portable/GCC/ARM_CM3/port.c:198:33: note: Assignment 'ulDummy=0UL', assigned value is 0
+    volatile uint32_t ulDummy = 0UL;
+                                ^
+third_party/FreeRTOS-10.4/portable/GCC/ARM_CM3/port.c:209:20: note: Condition 'ulDummy==0' is always true
+    while( ulDummy == 0 )
+                   ^
+third_party/FreeRTOS-10.4/portable/GCC/ARM_CM3/port.c:644:0: information: Skipping configuration 'configSYSTICK_CLOCK_HZ' since the value of 'configSYSTICK_CLOCK_HZ' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    portNVIC_SYSTICK_LOAD_REG = ( configSYSTICK_CLOCK_HZ / configTICK_RATE_HZ ) - 1UL;
+^
+third_party/FreeRTOS-10.4/portable/GCC/ARM_CM3/port.c:187:0: information: Skipping configuration 'configTASK_RETURN_ADDRESS' since the value of 'configTASK_RETURN_ADDRESS' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    *pxTopOfStack = ( StackType_t ) portTASK_RETURN_ADDRESS;             /* LR */
+^
+third_party/FreeRTOS-10.4/portable/GCC/ARM_CM3_MPU/port.c:748:13: style: The scope of the variable 'lIndex' can be reduced. [variableScope]
+    int32_t lIndex;
+            ^
+third_party/FreeRTOS-10.4/portable/GCC/ARM_CM3_MPU/port.c:617:0: information: Skipping configuration 'configSYSTICK_CLOCK_HZ' since the value of 'configSYSTICK_CLOCK_HZ' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    portNVIC_SYSTICK_LOAD_REG = ( configSYSTICK_CLOCK_HZ / configTICK_RATE_HZ ) - 1UL;
+^
+third_party/FreeRTOS-10.4/portable/GCC/ARM_CM4F/port.c:234:20: style: Condition 'ulDummy==0' is always true [knownConditionTrueFalse]
+    while( ulDummy == 0 )
+                   ^
+third_party/FreeRTOS-10.4/portable/GCC/ARM_CM4F/port.c:223:33: note: Assignment 'ulDummy=0', assigned value is 0
+    volatile uint32_t ulDummy = 0;
+                                ^
+third_party/FreeRTOS-10.4/portable/GCC/ARM_CM4F/port.c:234:20: note: Condition 'ulDummy==0' is always true
+    while( ulDummy == 0 )
+                   ^
+third_party/FreeRTOS-10.4/portable/GCC/ARM_CM4_MPU/port.c:847:13: style: The scope of the variable 'lIndex' can be reduced. [variableScope]
+    int32_t lIndex;
+            ^
+third_party/FreeRTOS-10.4/portable/GCC/ARM_CM7/r0p1/port.c:228:20: style: Condition 'ulDummy==0' is always true [knownConditionTrueFalse]
+    while( ulDummy == 0 )
+                   ^
+third_party/FreeRTOS-10.4/portable/GCC/ARM_CM7/r0p1/port.c:217:33: note: Assignment 'ulDummy=0', assigned value is 0
+    volatile uint32_t ulDummy = 0;
+                                ^
+third_party/FreeRTOS-10.4/portable/GCC/ARM_CM7/r0p1/port.c:228:20: note: Condition 'ulDummy==0' is always true
+    while( ulDummy == 0 )
+                   ^
+third_party/FreeRTOS-10.4/portable/IAR/ARM_CM3/port.c:0:0: information: This file is not analyzed. Cppcheck failed to extract a valid configuration. Use -v for more details. [noValidConfiguration]
+
+^
+third_party/FreeRTOS-10.4/portable/IAR/ARM_CM4F/port.c:0:0: information: This file is not analyzed. Cppcheck failed to extract a valid configuration. Use -v for more details. [noValidConfiguration]
+
+^
+third_party/FreeRTOS-10.4/portable/IAR/ARM_CM4F_MPU/port.c:0:0: information: This file is not analyzed. Cppcheck failed to extract a valid configuration. Use -v for more details. [noValidConfiguration]
+
+^
+third_party/FreeRTOS-10.4/portable/IAR/ARM_CM7/r0p1/port.c:0:0: information: This file is not analyzed. Cppcheck failed to extract a valid configuration. Use -v for more details. [noValidConfiguration]
+
+^
+third_party/FreeRTOS-10.4/portable/RVDS/ARM_CM0/port.c:183:11: error: syntax error [syntaxError]
+    ldr r3, = pxCurrentTCB /* Obtain location of pxCurrentTCB. */
+          ^
+third_party/FreeRTOS-10.4/portable/RVDS/ARM_CM3/port.c:407:0: information: Skipping configuration 'configMAX_SYSCALL_INTERRUPT_PRIORITY' since the value of 'configMAX_SYSCALL_INTERRUPT_PRIORITY' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    mov r0, #configMAX_SYSCALL_INTERRUPT_PRIORITY
+^
+third_party/FreeRTOS-10.4/portable/RVDS/ARM_CM4F/port.c:318:0: information: Skipping configuration '__TARGET_FPU_VFP;configMAX_SYSCALL_INTERRUPT_PRIORITY' since the value of 'configMAX_SYSCALL_INTERRUPT_PRIORITY' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    configASSERT( configMAX_SYSCALL_INTERRUPT_PRIORITY );
+^
+third_party/FreeRTOS-10.4/portable/RVDS/ARM_CM4F/port.c:482:0: information: Skipping configuration '__TARGET_FPU_VFP;configMAX_SYSCALL_INTERRUPT_PRIORITY' since the value of 'configMAX_SYSCALL_INTERRUPT_PRIORITY' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    mov r0, #configMAX_SYSCALL_INTERRUPT_PRIORITY
+^
+third_party/FreeRTOS-10.4/portable/RVDS/ARM_CM4_MPU/port.c:697:30: error: Unmatched ')'. Configuration: '__TARGET_FPU_VFP'. [syntaxError]
+    orr r1, r1, #( 0xf << 20 ) /* Enable CP10 and CP11 coprocessors, then save back. */
+                             ^
+third_party/FreeRTOS-10.4/portable/RVDS/ARM_CM7/r0p1/port.c:466:0: information: Skipping configuration '__TARGET_FPU_VFP;configMAX_SYSCALL_INTERRUPT_PRIORITY' since the value of 'configMAX_SYSCALL_INTERRUPT_PRIORITY' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    mov r0, #configMAX_SYSCALL_INTERRUPT_PRIORITY
+^
+third_party/FreeRTOS-10.4/rndis_host/rndis_host.c:249:9: portability: %d in format string (no. 1) requires 'int' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]
+        printf("RNDIS MTU is:%d, but the send packet size is %d\r\n", sizeof(tx_buffer), p->tot_len);
+        ^
+third_party/FreeRTOS-10.4/rndis_host/rndis_host.c:150:9: style: The scope of the variable 'ret' can be reduced. [variableScope]
+    int ret = 0;
+        ^
+third_party/FreeRTOS-10.4/rndis_host/rndis_host.c:153:9: style: The scope of the variable 'pmg_offset' can be reduced. [variableScope]
+    int pmg_offset;
+        ^
+third_party/FreeRTOS-10.4/rndis_host/rndis_host.c:154:9: style: The scope of the variable 'payload_offset' can be reduced. [variableScope]
+    int payload_offset;
+        ^
+third_party/FreeRTOS-10.4/rndis_host/rndis_host.c:224:9: style: The scope of the variable 'ret' can be reduced. [variableScope]
+    int ret;
+        ^
+third_party/FreeRTOS-10.4/rndis_host/rndis_host.c:225:9: style: The scope of the variable 'recount' can be reduced. [variableScope]
+    int recount = 5;
+        ^
+third_party/FreeRTOS-10.4/rndis_host/rndis_host.c:226:13: style: The scope of the variable 'data' can be reduced. [variableScope]
+    uint8_t data[4];
+            ^
+third_party/FreeRTOS-10.4/rndis_host/rndis_host.c:150:13: style: Variable 'ret' is assigned a value that is never used. [unreadVariable]
+    int ret = 0;
+            ^
+third_party/fatfs-0.14/source/diskio.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 19 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+third_party/fatfs-0.14/source/diskio.c:205:6: style: Unused variable: result [unusedVariable]
+ int result;
+     ^
+third_party/fatfs-0.14/source/ff.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 76 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+third_party/fatfs-0.14/source/ff.c:2955:14: warning: The address of local variable 'path' might be accessed at non-zero index. [objectIndex]
+  c = (BYTE)p[si++];    /* Get a byte */
+             ^
+third_party/fatfs-0.14/source/ff.c:3045:26: note: Address of variable taken here.
+   res = create_name(dp, &path); /* Get a segment name of the path */
+                         ^
+third_party/fatfs-0.14/source/ff.c:3045:26: note: Calling function 'create_name', 2nd argument '&path' value is lifetime=path
+   res = create_name(dp, &path); /* Get a segment name of the path */
+                         ^
+third_party/fatfs-0.14/source/ff.c:2955:14: note: The address of local variable 'path' might be accessed at non-zero index.
+  c = (BYTE)p[si++];    /* Get a byte */
+             ^
+third_party/fatfs-0.14/source/ff.c:2986:12: warning: The address of local variable 'path' might be accessed at non-zero index. [objectIndex]
+ *path = &p[si];      /* Return pointer to the next segment */
+           ^
+third_party/fatfs-0.14/source/ff.c:3045:26: note: Address of variable taken here.
+   res = create_name(dp, &path); /* Get a segment name of the path */
+                         ^
+third_party/fatfs-0.14/source/ff.c:3045:26: note: Calling function 'create_name', 2nd argument '&path' value is lifetime=path
+   res = create_name(dp, &path); /* Get a segment name of the path */
+                         ^
+third_party/fatfs-0.14/source/ff.c:2986:12: note: The address of local variable 'path' might be accessed at non-zero index.
+ *path = &p[si];      /* Return pointer to the next segment */
+           ^
+third_party/fatfs-0.14/source/ff.c:3781:11: style: The if condition is the same as the previous if condition [duplicateCondition]
+  if (res == FR_OK) {
+          ^
+third_party/fatfs-0.14/source/ff.c:3760:11: note: First condition
+  if (res == FR_OK) {
+          ^
+third_party/fatfs-0.14/source/ff.c:3781:11: note: Second condition
+  if (res == FR_OK) {
+          ^
+third_party/fatfs-0.14/source/ff.c:5050:13: style: Condition 'res==FR_OK' is always true [knownConditionTrueFalse]
+    if (res == FR_OK) {
+            ^
+third_party/fatfs-0.14/source/ff.c:5032:12: note: Assuming that condition 'res==FR_OK' is not redundant
+   if (res == FR_OK) {
+           ^
+third_party/fatfs-0.14/source/ff.c:5050:13: note: Condition 'res==FR_OK' is always true
+    if (res == FR_OK) {
+            ^
+third_party/fatfs-0.14/source/ff.c:1671:8: style: The scope of the variable 'csz' can be reduced. [variableScope]
+ DWORD csz, clst;
+       ^
+third_party/fatfs-0.14/source/ff.c:720:9: style: Unsigned expression 'c' can't be negative so it is unnecessary to test it. [unsignedPositive]
+  if (c >= DbcTbl[8] && c <= DbcTbl[9]) return 1;
+        ^
+third_party/fatfs-0.14/source/ff.c:720:27: style: Checking if unsigned expression 'c' is less than zero. [unsignedLessThanZero]
+  if (c >= DbcTbl[8] && c <= DbcTbl[9]) return 1;
+                          ^
+third_party/fatfs-0.14/source/ff.c:1405:14: style: Variable 'res' is assigned a value that is never used. [unreadVariable]
+ FRESULT res = FR_OK;
+             ^
+third_party/fatfs-0.14/source/ffsystem.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 19 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+third_party/fatfs-0.14/source/ffunicode.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 20 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+third_party/rt-thread-4.1.1/dfs/udisk.c:316:24: style: The scope of the variable 'data' can be reduced. [variableScope]
+    struct ustor_data *data;
+                       ^
+third_party/rt-thread-4.1.1/dfs/udisk.c:159:10: style: Variable 'data' is assigned a value that is never used. [unreadVariable]
+    data = (struct ustor_data *)dev->user_data;
+         ^
+third_party/rt-thread-4.1.1/dfs/udisk.c:200:16: style: Unused variable: max_lun [unusedVariable]
+    rt_uint8_t max_lun, *sector, sense[18], inquiry[36];
+               ^
+third_party/rt-thread-4.1.1/rndis_host/rndis_host.c:190:9: style: The scope of the variable 'ret' can be reduced. [variableScope]
+    int ret = 0;
+        ^
+third_party/rt-thread-4.1.1/rndis_host/rndis_host.c:197:9: style: The scope of the variable 'pmg_offset' can be reduced. [variableScope]
+    int pmg_offset;
+        ^
+third_party/rt-thread-4.1.1/rndis_host/rndis_host.c:198:9: style: The scope of the variable 'payload_offset' can be reduced. [variableScope]
+    int payload_offset;
+        ^
+third_party/rt-thread-4.1.1/rndis_host/rndis_host.c:137:10: style: Variable 'info' is assigned a value that is never used. [unreadVariable]
+    info = (rt_rndis_eth_t)rndis_class->user_data;
+         ^
+third_party/rt-thread-4.1.1/rndis_host/rndis_host.c:190:13: style: Variable 'ret' is assigned a value that is never used. [unreadVariable]
+    int ret = 0;
+            ^
+third_party/rt-thread-4.1.1/rndis_host/rndis_host.c:194:11: style: Unused variable: err [unusedVariable]
+    err_t err;
+          ^
+third_party/rt-thread-4.1.1/rndis_host/rndis_host.c:444:9: style: The scope of the variable 'recount' can be reduced. [variableScope]
+    int recount = 5;
+        ^
+third_party/rt-thread-4.1.1/rndis_host/rndis_host.c:445:9: style: The scope of the variable 'ret' can be reduced. [variableScope]
+    int ret;
+        ^
+third_party/rt-thread-4.1.1/rndis_host/rndis_host.c:446:13: style: The scope of the variable 'data' can be reduced. [variableScope]
+    uint8_t data[4];
+            ^
+port/xhci/xhci.c:1329:30: error: Using argument trb that points at uninitialized variable trb [ctuuninitvar]
+ memcpy((void *)dst, (void *)trb, sizeof(*trb));
+                             ^
+port/xhci/xhci.c:2248:16: note: Calling function xhci_trb_queue, 2nd argument is uninitialized
+ xhci_trb_queue(&(ep->reqs), &trb);
+               ^
+port/xhci/xhci.c:1355:2: note: Calling function xhci_trb_fill, 2nd argument is uninitialized
+ xhci_trb_fill(ring, trb);
+ ^
+port/xhci/xhci.c:1329:30: note: Using argument trb
+ memcpy((void *)dst, (void *)trb, sizeof(*trb));
+                             ^
+port/ch32/usb_hc_usbfs.c:157:0: style: The function 'CLEAR_UH_RX_CTRL_BIT' is never used. [unusedFunction]
+
+^
+port/ch32/usb_hc_usbfs.c:136:0: style: The function 'CLEAR_UH_TX_CTRL_BIT' is never used. [unusedFunction]
+
+^
+demo/dfu_st_cubemx_main.c:297:0: style: The function 'MX_USB_PCD_Init' is never used. [unusedFunction]
+
+^
+port/ch32/usb_dc_usbfs.c:255:0: style: The function 'OTG_FS_IRQHandler' is never used. [unusedFunction]
+
+^
+port/dwc2/usb_dc_dwc2.c:1015:0: style: The function 'OTG_HS_IRQHandler' is never used. [unusedFunction]
+
+^
+port/ch32/usb_hc_usbfs.c:96:0: style: The function 'SET_UH_RX_CTRL_BIT' is never used. [unusedFunction]
+
+^
+port/ch32/usb_hc_usbfs.c:116:0: style: The function 'SET_UH_TX_CTRL_BIT' is never used. [unusedFunction]
+
+^
+port/ch32/usb_hc_usbfs.c:1254:0: style: The function 'USB2_IRQHandler' is never used. [unusedFunction]
+
+^
+port/ch32/usb_dc_usbhs.c:248:0: style: The function 'USBHS_IRQHandler' is never used. [unusedFunction]
+
+^
+port/musb/usb_dc_musb.c:788:0: style: The function 'USB_INT_Handler' is never used. [unusedFunction]
+
+^
+port/ch32/usb_ch58x_dc_usbfs.c:446:0: style: The function 'USB_IRQHandler' is never used. [unusedFunction]
+
+^
+port/fsdev/usb_dc_fsdev.c:308:0: style: The function 'USB_LP_CAN1_RX0_IRQHandler' is never used. [unusedFunction]
+
+^
+demo/dfu_st_cubemx_main.c:363:0: style: The function 'assert_failed' is never used. [unusedFunction]
+
+^
+demo/audio_v1_mic_multichan_template.c:220:0: style: The function 'audio_test' is never used. [unusedFunction]
+
+^
+demo/audio_v1_mic_multichan_template.c:208:0: style: The function 'audio_v1_init' is never used. [unusedFunction]
+
+^
+demo/audio_v1_mic_speaker_multichan_template.c:246:0: style: The function 'audio_v1_test' is never used. [unusedFunction]
+
+^
+demo/audio_v2_mic_multichan_template.c:227:0: style: The function 'audio_v2_init' is never used. [unusedFunction]
+
+^
+demo/audio_v2_mic_multichan_template.c:237:0: style: The function 'audio_v2_test' is never used. [unusedFunction]
+
+^
+class/vendor/axusbnet.c:337:0: style: The function 'ax88772b_mdio_write' is never used. [unusedFunction]
+
+^
+demo/cdc_acm_hid_msc_template.c:357:0: style: The function 'cdc_acm_data_send_with_dtr_test' is never used. [unusedFunction]
+
+^
+demo/cdc_acm_hid_msc_template.c:303:0: style: The function 'cdc_acm_hid_msc_descriptor_init' is never used. [unusedFunction]
+
+^
+demo/cdc_acm_template.c:177:0: style: The function 'cdc_acm_init' is never used. [unusedFunction]
+
+^
+demo/cdc_acm_msc_template.c:185:0: style: The function 'cdc_acm_msc_init' is never used. [unusedFunction]
+
+^
+demo/cdc_acm_multi_template.c:226:0: style: The function 'cdc_acm_multi_init' is never used. [unusedFunction]
+
+^
+demo/cdc_rndis_template.c:285:0: style: The function 'cdc_rndis_init' is never used. [unusedFunction]
+
+^
+port/nrf5x/usb_dc_nrf5x.c:1141:0: style: The function 'cherry_usb_hal_nrf_power_event' is never used. [unusedFunction]
+
+^
+port/dwc2/usb_dc_dwc2.c:405:0: style: The function 'dwc2_ep_read' is never used. [unusedFunction]
+
+^
+third_party/fatfs-0.14/source/ff.c:4152:0: style: The function 'f_close' is never used. [unusedFunction]
+
+^
+third_party/fatfs-0.14/source/ff.c:4597:0: style: The function 'f_closedir' is never used. [unusedFunction]
+
+^
+third_party/fatfs-0.14/source/ff.c:4750:0: style: The function 'f_getfree' is never used. [unusedFunction]
+
+^
+third_party/fatfs-0.14/source/ff.c:4367:0: style: The function 'f_lseek' is never used. [unusedFunction]
+
+^
+third_party/fatfs-0.14/source/ff.c:4986:0: style: The function 'f_mkdir' is never used. [unusedFunction]
+
+^
+third_party/fatfs-0.14/source/ff.c:3605:0: style: The function 'f_mount' is never used. [unusedFunction]
+
+^
+third_party/fatfs-0.14/source/ff.c:3653:0: style: The function 'f_open' is never used. [unusedFunction]
+
+^
+third_party/fatfs-0.14/source/ff.c:4531:0: style: The function 'f_opendir' is never used. [unusedFunction]
+
+^
+third_party/fatfs-0.14/source/ff.c:3850:0: style: The function 'f_read' is never used. [unusedFunction]
+
+^
+third_party/fatfs-0.14/source/ff.c:4627:0: style: The function 'f_readdir' is never used. [unusedFunction]
+
+^
+third_party/fatfs-0.14/source/ff.c:5070:0: style: The function 'f_rename' is never used. [unusedFunction]
+
+^
+third_party/fatfs-0.14/source/ff.c:4715:0: style: The function 'f_stat' is never used. [unusedFunction]
+
+^
+third_party/fatfs-0.14/source/ff.c:4842:0: style: The function 'f_truncate' is never used. [unusedFunction]
+
+^
+third_party/fatfs-0.14/source/ff.c:4892:0: style: The function 'f_unlink' is never used. [unusedFunction]
+
+^
+third_party/fatfs-0.14/source/ff.c:3950:0: style: The function 'f_write' is never used. [unusedFunction]
+
+^
+demo/dfu_st_cubemx_main.c:80:0: style: The function 'fputc' is never used. [unusedFunction]
+
+^
+demo/hid_custom_inout_template.c:221:0: style: The function 'hid_custom_keyboard_init' is never used. [unusedFunction]
+
+^
+demo/hid_custom_inout_template.c:231:0: style: The function 'hid_custom_test' is never used. [unusedFunction]
+
+^
+demo/hid_keyboard_template.c:218:0: style: The function 'hid_keyboard_init' is never used. [unusedFunction]
+
+^
+demo/hid_keyboard_template.c:229:0: style: The function 'hid_keyboard_test' is never used. [unusedFunction]
+
+^
+demo/hid_mouse_template.c:236:0: style: The function 'hid_mouse_init' is never used. [unusedFunction]
+
+^
+demo/cdc_acm_hid_msc_template.c:332:0: style: The function 'hid_mouse_test' is never used. [unusedFunction]
+
+^
+port/rp2040/usb_dc_rp2040.c:516:0: style: The function 'isr_irq5' is never used. [unusedFunction]
+
+^
+core/usbh_core.c:726:0: style: The function 'lsusb' is never used. [unusedFunction]
+
+^
+demo/midi_template.c:195:0: style: The function 'midi_init' is never used. [unusedFunction]
+
+^
+demo/msc_ram_template.c:154:0: style: The function 'msc_ram_init' is never used. [unusedFunction]
+
+^
+demo/mtp_template.c:186:0: style: The function 'mtp_init' is never used. [unusedFunction]
+
+^
+third_party/FreeRTOS-10.4/tasks.c:2386:0: style: The function 'pcTaskGetName' is never used. [unusedFunction]
+
+^
+demo/printer_template.c:176:0: style: The function 'printer_init' is never used. [unusedFunction]
+
+^
+third_party/FreeRTOS-10.4/tasks.c:1071:0: style: The function 'prvAddNewTaskToReadyList' is never used. [unusedFunction]
+
+^
+third_party/FreeRTOS-10.4/queue.c:464:0: style: The function 'prvInitialiseNewQueue' is never used. [unusedFunction]
+
+^
+third_party/FreeRTOS-10.4/tasks.c:819:0: style: The function 'prvInitialiseNewTask' is never used. [unusedFunction]
+
+^
+third_party/FreeRTOS-10.4/portable/GCC/ARM_CM3_MPU/port.c:255:0: style: The function 'prvSVCHandler' is never used. [unusedFunction]
+
+^
+demo/cdc_rndis_template.c:248:0: style: The function 'rndis_input_poll' is never used. [unusedFunction]
+
+^
+third_party/rt-thread-4.1.1/rndis_host/rndis_host.c:154:0: style: The function 'rndis_msg_data_recv' is never used. [unusedFunction]
+
+^
+third_party/rt-thread-4.1.1/dfs/udisk.c:194:0: style: The function 'rt_udisk_run' is never used. [unusedFunction]
+
+^
+third_party/rt-thread-4.1.1/dfs/udisk.c:312:0: style: The function 'rt_udisk_stop' is never used. [unusedFunction]
+
+^
+third_party/FreeRTOS-10.4/portable/GCC/ARM_CM0/port.c:289:0: style: The function 'ulSetInterruptMaskFromISR' is never used. [unusedFunction]
+
+^
+core/usbd_core.c:1268:0: style: The function 'usb_device_is_configured' is never used. [unusedFunction]
+
+^
+port/musb/usb_dc_musb.c:544:0: style: The function 'usb_ep_wait_in_data_avail' is never used. [unusedFunction]
+
+^
+port/xhci/usb_hc_xhci.c:55:0: style: The function 'usb_hc_free' is never used. [unusedFunction]
+
+^
+port/xhci/usb_hc_xhci.c:45:0: style: The function 'usb_hc_malloc' is never used. [unusedFunction]
+
+^
+port/xhci/usb_hc_xhci.c:50:0: style: The function 'usb_hc_malloc_align' is never used. [unusedFunction]
+
+^
+osal/usb_osal_freertos.c:58:0: style: The function 'usb_osal_mutex_delete' is never used. [unusedFunction]
+
+^
+osal/usb_osal_freertos.c:26:0: style: The function 'usb_osal_sem_delete' is never used. [unusedFunction]
+
+^
+core/usbd_core.c:1298:0: style: The function 'usbd_deinitialize' is never used. [unusedFunction]
+
+^
+port/ch32/usb_ch58x_dc_usbfs.c:352:0: style: The function 'usbd_ep_is_stalled' is never used. [unusedFunction]
+
+^
+core/usbd_core.c:979:0: style: The function 'usbd_event_connect_handler' is never used. [unusedFunction]
+
+^
+core/usbd_core.c:984:0: style: The function 'usbd_event_disconnect_handler' is never used. [unusedFunction]
+
+^
+core/usbd_core.c:989:0: style: The function 'usbd_event_resume_handler' is never used. [unusedFunction]
+
+^
+core/usbd_core.c:994:0: style: The function 'usbd_event_suspend_handler' is never used. [unusedFunction]
+
+^
+port/musb/usb_dc_musb.c:285:0: style: The function 'usbd_force_full_speed' is never used. [unusedFunction]
+
+^
+class/msc/usbd_msc.c:838:0: style: The function 'usbd_msc_set_readonly' is never used. [unusedFunction]
+
+^
+core/usbd_core.c:1239:0: style: The function 'usbd_msosv2_desc_register' is never used. [unusedFunction]
+
+^
+port/musb/usb_dc_musb.c:555:0: style: The function 'usbd_read_packet' is never used. [unusedFunction]
+
+^
+port/musb/usb_dc_musb.c:584:0: style: The function 'usbd_write_packet' is never used. [unusedFunction]
+
+^
+class/template/usbd_xxx.c:31:0: style: The function 'usbd_xxx_add_interface' is never used. [unusedFunction]
+
+^
+class/audio/usbh_audio.c:49:0: style: The function 'usbh_audio_open' is never used. [unusedFunction]
+
+^
+class/audio/usbh_audio.c:199:0: style: The function 'usbh_audio_set_mute' is never used. [unusedFunction]
+
+^
+class/audio/usbh_audio.c:166:0: style: The function 'usbh_audio_set_volume' is never used. [unusedFunction]
+
+^
+class/cdc/usbh_cdc_acm.c:54:0: style: The function 'usbh_cdc_acm_get_line_coding' is never used. [unusedFunction]
+
+^
+demo/usb_host.c:423:0: style: The function 'usbh_class_test' is never used. [unusedFunction]
+
+^
+core/usbh_core.c:642:0: style: The function 'usbh_find_hubport' is never used. [unusedFunction]
+
+^
+port/dwc2/usb_hc_dwc2.c:545:0: style: The function 'usbh_get_frame_number' is never used. [unusedFunction]
+
+^
+class/hub/usbh_hub.c:279:0: style: The function 'usbh_hub_set_depth' is never used. [unusedFunction]
+
+^
+core/usbh_core.c:682:0: style: The function 'usbh_initialize' is never used. [unusedFunction]
+
+^
+class/printer/usbh_printer.c:11:0: style: The function 'usbh_printer_get_device_id' is never used. [unusedFunction]
+
+^
+class/printer/usbh_printer.c:25:0: style: The function 'usbh_printer_get_port_status' is never used. [unusedFunction]
+
+^
+class/printer/usbh_printer.c:39:0: style: The function 'usbh_printer_soft_reset' is never used. [unusedFunction]
+
+^
+class/video/usbh_video.c:113:0: style: The function 'usbh_video_open' is never used. [unusedFunction]
+
+^
+third_party/FreeRTOS-10.4/queue.c:2015:0: style: The function 'uxQueueMessagesWaiting' is never used. [unusedFunction]
+
+^
+third_party/FreeRTOS-10.4/queue.c:2048:0: style: The function 'uxQueueMessagesWaitingFromISR' is never used. [unusedFunction]
+
+^
+third_party/FreeRTOS-10.4/queue.c:2031:0: style: The function 'uxQueueSpacesAvailable' is never used. [unusedFunction]
+
+^
+third_party/FreeRTOS-10.4/tasks.c:2378:0: style: The function 'uxTaskGetNumberOfTasks' is never used. [unusedFunction]
+
+^
+third_party/FreeRTOS-10.4/portable/GCC/ARM_CM0/port.c:300:0: style: The function 'vClearInterruptMaskFromISR' is never used. [unusedFunction]
+
+^
+third_party/FreeRTOS-10.4/event_groups.c:685:0: style: The function 'vEventGroupClearBitsCallback' is never used. [unusedFunction]
+
+^
+third_party/FreeRTOS-10.4/event_groups.c:628:0: style: The function 'vEventGroupDelete' is never used. [unusedFunction]
+
+^
+third_party/FreeRTOS-10.4/event_groups.c:676:0: style: The function 'vEventGroupSetBitsCallback' is never used. [unusedFunction]
+
+^
+third_party/FreeRTOS-10.4/list.c:87:0: style: The function 'vListInsertEnd' is never used. [unusedFunction]
+
+^
+third_party/FreeRTOS-10.4/portable/GCC/ARM_CM0/port.c:268:0: style: The function 'vPortEnterCritical' is never used. [unusedFunction]
+
+^
+third_party/FreeRTOS-10.4/portable/GCC/ARM_CM0/port.c:277:0: style: The function 'vPortExitCritical' is never used. [unusedFunction]
+
+^
+third_party/FreeRTOS-10.4/portable/GCC/ARM_CM0/port.c:180:0: style: The function 'vPortSVCHandler' is never used. [unusedFunction]
+
+^
+third_party/FreeRTOS-10.4/portable/GCC/ARM_CM3_MPU/port.c:739:0: style: The function 'vPortStoreTaskMPUSettings' is never used. [unusedFunction]
+
+^
+third_party/FreeRTOS-10.4/portable/GCC/ARM_CM0/port.c:256:0: style: The function 'vPortYield' is never used. [unusedFunction]
+
+^
+third_party/FreeRTOS-10.4/queue.c:2060:0: style: The function 'vQueueDelete' is never used. [unusedFunction]
+
+^
+third_party/FreeRTOS-10.4/portable/GCC/ARM_CM3_MPU/port.c:726:0: style: The function 'vResetPrivilege' is never used. [unusedFunction]
+
+^
+third_party/FreeRTOS-10.4/tasks.c:2125:0: style: The function 'vTaskEndScheduler' is never used. [unusedFunction]
+
+^
+third_party/FreeRTOS-10.4/tasks.c:3300:0: style: The function 'vTaskSetTimeOutState' is never used. [unusedFunction]
+
+^
+third_party/FreeRTOS-10.4/tasks.c:1997:0: style: The function 'vTaskStartScheduler' is never used. [unusedFunction]
+
+^
+demo/video_static_mjpeg_template.c:199:0: style: The function 'video_init' is never used. [unusedFunction]
+
+^
+demo/video_static_mjpeg_template.c:211:0: style: The function 'video_test' is never used. [unusedFunction]
+
+^
+demo/winusb1.0_template.c:443:0: style: The function 'winusb_init' is never used. [unusedFunction]
+
+^
+third_party/FreeRTOS-10.4/event_groups.c:517:0: style: The function 'xEventGroupGetBitsFromISR' is never used. [unusedFunction]
+
+^
+third_party/FreeRTOS-10.4/event_groups.c:194:0: style: The function 'xEventGroupSync' is never used. [unusedFunction]
+
+^
+third_party/FreeRTOS-10.4/event_groups.c:317:0: style: The function 'xEventGroupWaitBits' is never used. [unusedFunction]
+
+^
+third_party/FreeRTOS-10.4/portable/GCC/ARM_CM3_MPU/port.c:709:0: style: The function 'xIsPrivileged' is never used. [unusedFunction]
+
+^
+third_party/FreeRTOS-10.4/portable/GCC/ARM_CM0/port.c:310:0: style: The function 'xPortPendSVHandler' is never used. [unusedFunction]
+
+^
+third_party/FreeRTOS-10.4/portable/GCC/ARM_CM0/port.c:359:0: style: The function 'xPortSysTickHandler' is never used. [unusedFunction]
+
+^
+third_party/FreeRTOS-10.4/queue.c:805:0: style: The function 'xQueueGenericSend' is never used. [unusedFunction]
+
+^
+third_party/FreeRTOS-10.4/queue.c:1017:0: style: The function 'xQueueGenericSendFromISR' is never used. [unusedFunction]
+
+^
+third_party/FreeRTOS-10.4/queue.c:1184:0: style: The function 'xQueueGiveFromISR' is never used. [unusedFunction]
+
+^
+third_party/FreeRTOS-10.4/queue.c:2405:0: style: The function 'xQueueIsQueueEmptyFromISR' is never used. [unusedFunction]
+
+^
+third_party/FreeRTOS-10.4/queue.c:2446:0: style: The function 'xQueueIsQueueFullFromISR' is never used. [unusedFunction]
+
+^
+third_party/FreeRTOS-10.4/queue.c:1714:0: style: The function 'xQueuePeek' is never used. [unusedFunction]
+
+^
+third_party/FreeRTOS-10.4/queue.c:1960:0: style: The function 'xQueuePeekFromISR' is never used. [unusedFunction]
+
+^
+third_party/FreeRTOS-10.4/queue.c:1865:0: style: The function 'xQueueReceiveFromISR' is never used. [unusedFunction]
+
+^
+third_party/FreeRTOS-10.4/queue.c:1495:0: style: The function 'xQueueSemaphoreTake' is never used. [unusedFunction]
+
+^
+third_party/FreeRTOS-10.4/tasks.c:2638:0: style: The function 'xTaskCatchUpTicks' is never used. [unusedFunction]
+
+^
+third_party/FreeRTOS-10.4/tasks.c:2332:0: style: The function 'xTaskGetTickCount' is never used. [unusedFunction]
+
+^
+third_party/FreeRTOS-10.4/tasks.c:2347:0: style: The function 'xTaskGetTickCountFromISR' is never used. [unusedFunction]
+
+^
+port/xhci/xhci.c:1005:0: style: The function 'xhci_close' is never used. [unusedFunction]
+
+^
+port/xhci/xhci.c:1896:0: style: The function 'xhci_device_close' is never used. [unusedFunction]
+
+^
+port/xhci/xhci_dbg.c:50:0: style: The function 'xhci_dump' is never used. [unusedFunction]
+
+^
+port/xhci/xhci_dbg.c:89:0: style: The function 'xhci_dump_port' is never used. [unusedFunction]
+
+^
+port/xhci/xhci_dbg.c:294:0: style: The function 'xhci_endpoint_type' is never used. [unusedFunction]
+
+^
+port/xhci/xhci_dbg.c:282:0: style: The function 'xhci_endpoint_xhci_type' is never used. [unusedFunction]
+
+^
+port/xhci/xhci_dbg.c:221:0: style: The function 'xhci_get_next_trb' is never used. [unusedFunction]
+
+^
+port/xhci/xhci.c:1469:0: style: The function 'xhci_nop' is never used. [unusedFunction]
+
+^
+port/xhci/xhci.c:1027:0: style: The function 'xhci_remove' is never used. [unusedFunction]
+
+^
+port/xhci/xhci.c:1687:0: style: The function 'xhci_reset_endpoint' is never used. [unusedFunction]
+
+^
+port/xhci/xhci.c:1719:0: style: The function 'xhci_stop_endpoint' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
